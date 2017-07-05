@@ -1,0 +1,27 @@
+{
+    "name": "HireImmigrants",
+    "version": "0.0.1",
+    "author": "Mohammad Batroukh",
+    "private": true,
+    "devDependencies": {
+        "grunt": "~0.4.0",
+        "matchdep": "*",        
+        "grunt-contrib-concat": "*",
+        "grunt-contrib-copy": "*",
+        "grunt-contrib-cssmin": "*",
+        "grunt-contrib-jshint": "*",
+        "grunt-contrib-sass": "*",
+        "grunt-ftp-deploy": "*",
+        "grunt-contrib-uglify": "*",
+        "grunt-contrib-watch": "*",
+        "grunt-cssc": "*",
+        "grunt-svgstore": "*",
+        "grunt-tinypng": "*",
+        "grunt-remove-logging": "*",        
+        "grunt-uncss": "*",
+        "grunt-sass": "*",
+        "grunt-postcss": "*",
+        "autoprefixer": "*",
+        "cssnano": "*"
+    }
+}
