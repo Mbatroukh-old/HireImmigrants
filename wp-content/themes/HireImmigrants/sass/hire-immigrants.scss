@@ -26,6 +26,9 @@
 // MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMM
 
 // Settings -- Sass vars, etc.
+@import "settings/colours";
+@import "settings/fonts";
+@import "settings/typography";
 // Tools -- Functions and mixins.
 // Generic -- Generic, high-level styling, like resets, etc.
 @import "generic/containers";
@@ -34,4 +37,10 @@
 // Object -- Objects and abstractions.
 @import "object/header";
 // Components -- Your designed UI elements
+@import "component/navigation";
+@import "component/banner";
+@import "component/buttons";
+@import "component/spotlights";
+@import "component/category-grid";
+@import "component/explore-highlights";
 // Trumps -- Overrides and helper classes

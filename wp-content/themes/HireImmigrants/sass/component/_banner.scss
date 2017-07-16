@@ -1,0 +1,40 @@
+.home-banner{
+	max-height: 560px;
+	height: 560px;
+	position: relative;
+	overflow: hidden;
+	img{
+		width: 100%;
+	}
+	.overlay{
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#000000+0,000000+100&0.1+0,0.8+100 */
+		background: -moz-linear-gradient(top, rgba(0,0,0,0.1) 0%, rgba(0,0,0,0.8) 100%); /* FF3.6-15 */
+		background: -webkit-linear-gradient(top, rgba(0,0,0,0.1) 0%,rgba(0,0,0,0.8) 100%); /* Chrome10-25,Safari5.1-6 */
+		background: linear-gradient(to bottom, rgba(0,0,0,0.1) 0%,rgba(0,0,0,0.8) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+		filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#1a000000', endColorstr='#cc000000',GradientType=0 ); /* IE6-9 */
+		padding-top: 132px;
+		span{
+			font-size: 14px;
+			text-transform: uppercase;
+			padding: 10px 14px;
+			color: $white;
+			background: $buttercup;
+			border-radius: 3px;
+			// margin-bottom: 10px;
+			display: inline-block;
+		}
+		h1{
+			width: 85%;
+			// font-size: 60px;
+			font-size: 54px;
+			line-height: 74px;
+			color: $white;
+			margin: 0 0 30px 0;
+		}
+	}
+}

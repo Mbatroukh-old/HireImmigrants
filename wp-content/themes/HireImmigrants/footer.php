@@ -1,5 +1,5 @@
 This is the footer.php file.
-<script src="js/hire-immigrants.js"></script>
+<script src="<?php echo get_template_directory_uri(); ?>/js/hire-immigrants.js"></script>
 <?php wp_footer(); ?>
 </body>
 </html>

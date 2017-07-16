@@ -1,0 +1,38 @@
+.btn{
+	font-size: 16px;
+	padding: 15px 20px;
+	text-decoration: none;
+	transition: all 0.2s;
+	font-family: $truenoReg;
+	border-radius: 3px;
+}
+
+.purple{
+	color: $white;
+	background: $victoria;
+	&:hover{
+		transition: all 0.2s;
+		background: darken($victoria, 10%);
+	}
+	.ico{
+		fill: $white;
+	}
+}
+
+.btn-arrow{
+	position: relative;
+	float: left;
+	.ico{
+		height: 20px;
+		width: 20px;
+		float: right;
+		margin-left: 85px;
+	}
+	&:hover{
+		transition: all 0.2s;
+		background: darken($victoria, 10%);
+	}
+}
+input[type="submit"]{
+	border: none;
+}

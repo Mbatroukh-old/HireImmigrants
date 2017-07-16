@@ -1,0 +1,66 @@
+.spotlights{
+	margin-top: -35px;
+	position: relative;
+	margin-bottom: 145px;
+	.spotlight-wrap{
+		display: flex;
+		overflow: hidden;
+		.spotlight{
+			// float: left;
+			flex: 1;
+			width: 47.5%;
+			margin-right: 5%;
+			border: solid 1px $alto;
+			border-radius: 3px;
+			padding: 35px;
+			background: $white;
+			box-sizing: border-box;
+			span{
+				font-size: 16px;
+				color: $dusty-gray;
+				display: block;
+				margin-bottom: 15px;
+				font-family: $truenoSemiBold;
+				letter-spacing: 3px;
+				text-transform: uppercase;
+			}
+			h6{
+				// font-size: 24px;
+				color: $tundora;
+				// line-height: 36px;
+				line-height: 32px;
+				display: block;
+				margin-bottom: 10px;
+			}
+			p{
+
+			}
+			a{
+
+			}
+			form{
+				font-family: $truenoReg;
+				font-size: 16px;
+				input{
+					display: block;
+					width: 300px;
+				}
+				input[type="text"]{
+					border: solid 1px $dove-gray;
+					border-radius: 3px;
+					margin-bottom: 15px;
+					padding: 15px 20px;
+					box-sizing: border-box;
+				}
+			}
+			&:last-child{
+				margin-right: 0;
+			}
+		}
+	}
+	&:after{
+		content: "";
+		display: table;
+		clear: both;
+	}
+}

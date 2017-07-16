@@ -1,10 +1,45 @@
 header{
 	padding: 10px 0;
+	font-family: "TruenoSemiBold";
 	
 	.left{
 		float: left;
+
+		.logo{
+			text-decoration: none;
+			color: $mine-shaft;
+			line-height: 55px;
+			font-size: 20px;
+
+			.ico{
+				height: 55px;
+				width: 55px;
+				margin-right: 20px;
+				float: left;
+			}
+		}
 	}
 	.right{
 		float: right;
+		.search{
+			float: right;
+			border-right: solid 1px $wild-sand;
+			border-left: solid 1px $wild-sand;
+			padding: 17px 25px;
+			margin-left: 33px;
+			cursor: pointer;
+			.ico{
+				width: 21px;
+				height: 21px;
+				fill: $mine-shaft;
+				transition: all 0.2s;
+			}
+			&:hover{
+				.ico{
+					fill: $victoria;
+					transition: all 0.2s;
+				}
+			}
+		}
 	}
 }

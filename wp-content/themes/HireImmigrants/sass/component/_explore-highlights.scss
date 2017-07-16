@@ -1,0 +1,35 @@
+.explore-wrap{
+	.explore-highlights{
+		.row{
+			.block{
+				border-radius: 3px;
+				padding: 35px;
+				box-sizing: border-box;
+			}
+			&:first-child{
+				display: flex;
+				margin-bottom: 45px;
+				.block{
+					flex: 1;
+					width: 47.5%;
+					&:first-child{
+						margin-right: 5%;
+						border: solid 1px $wild-blue-yonder;
+						background: $whisper;
+					}
+					&:last-child{
+						margin-right: 0;
+						border: solid 1px $water-leaf;
+						background: $polar;
+					}
+				}
+			}
+			&:last-child{
+				.block{
+					border: solid 1px $rajah;
+					background: $bridal-heath;
+				}
+			}
+		}
+	}
+}
