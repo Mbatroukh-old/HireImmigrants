@@ -94,23 +94,59 @@
 				<div class="block ">
 					<h6>Hire Refugees</h6>
 					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam explicabo provident laboriosam maiores iusto ipsum.</p>
-					<a href="#" class="btn btn-arrow">Explore</a>
+					<a href="#" class="btn btn-arrow">
+						Explore best practices
+						<svg class="ico">
+							<use xlink:href="#arrow"/>
+						</svg>
+					</a>
 				</div>
 				<div class="block">
 					<h6>Small Business Resources</h6>
 					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam explicabo provident.</p>
-					<a href="#" class="btn btn-arrow">Explore</a>
+					<a href="#" class="btn btn-arrow">
+						Get tools &amp; resources
+						<svg class="ico">
+							<use xlink:href="#arrow"/>
+						</svg>
+					</a>
 				</div>
 			</div>
 			<div class="row">
 				<div class="block">
-					<h6>Access immigrant talent</h6>
-					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam explicabo provident laboriosam maiores iusto ipsum.</p>
-					<a href="#" class="btn btn-arrow">Discover careers</a>
+					<div class="block__group">
+						<h6>Access immigrant talent</h6>
+						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam explicabo provident laboriosam maiores iusto ipsum.</p>
+					</div>
+					<a href="#" class="btn btn-arrow">
+						Discover talent
+						<svg class="ico">
+							<use xlink:href="#arrow"/>
+						</svg>
+					</a>
 				</div>
 			</div>
 		</div>
 	</div>
 </div>
-
+<!-- <div class="founding logo-row">
+	<div class="container">
+		<h2>Our founding partners</h2>
+	</div>
+</div>
+<div class="funded logo-row">
+	<div class="container">
+		<h2>Funded by</h2>
+	</div>
+</div>
+<div class="sister-sites logo-row">
+	<div class="container">
+		<h2>Sister sites</h2>
+	</div>
+</div>
+<div class="partners logo-row">
+	<div class="container">
+		<h2>Institutional partners</h2>
+	</div>
+</div> -->
 <?php get_footer(); ?>

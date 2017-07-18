@@ -5,6 +5,33 @@
 				border-radius: 3px;
 				padding: 35px;
 				box-sizing: border-box;
+				.btn{
+					color: $white;
+					display: block;
+					.ico{
+						fill: $white;
+					}
+				}
+				h6{
+					font-size: 24px;
+					display: block;
+					margin-bottom: 15px;
+					font-family: $truenoReg;
+					color: $tundora;
+				}
+				p{
+					display: block;
+					margin-bottom: 25px;
+					font-family: $georgia;
+					font-size: 20px;
+					color: $tundora;
+					line-height: 34px;
+				}
+				&:after{
+					content: "";
+					display: block;
+					clear: both;
+				}
 			}
 			&:first-child{
 				display: flex;
@@ -16,11 +43,25 @@
 						margin-right: 5%;
 						border: solid 1px $wild-blue-yonder;
 						background: $whisper;
+						.btn{
+							background: $victoria;
+							&:hover{
+								transition: all 0.2s;
+								background: darken($victoria, 10%);
+							}
+						}
 					}
 					&:last-child{
 						margin-right: 0;
 						border: solid 1px $water-leaf;
 						background: $polar;
+						.btn{
+							background: $riptide;
+							&:hover{
+								transition: all 0.2s;
+								background: darken($riptide, 10%);
+							}
+						}
 					}
 				}
 			}
@@ -28,6 +69,18 @@
 				.block{
 					border: solid 1px $rajah;
 					background: $bridal-heath;
+					.block__group{
+						width: 65%;
+						float: left;
+					}
+					.btn{
+						background: $buttercup;
+						float: right;
+						&:hover{
+							transition: all 0.2s;
+							background: darken($buttercup, 10%);
+						}
+					}
 				}
 			}
 		}

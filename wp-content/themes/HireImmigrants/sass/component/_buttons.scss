@@ -28,10 +28,6 @@
 		float: right;
 		margin-left: 85px;
 	}
-	&:hover{
-		transition: all 0.2s;
-		background: darken($victoria, 10%);
-	}
 }
 input[type="submit"]{
 	border: none;

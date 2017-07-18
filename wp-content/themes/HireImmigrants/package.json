@@ -5,7 +5,7 @@
     "private": true,
     "devDependencies": {
         "grunt": "~0.4.0",
-        "matchdep": "*",        
+        "matchdep": "*",
         "grunt-contrib-concat": "*",
         "grunt-contrib-copy": "*",
         "grunt-contrib-cssmin": "*",
@@ -17,7 +17,7 @@
         "grunt-cssc": "*",
         "grunt-svgstore": "*",
         "grunt-tinypng": "*",
-        "grunt-remove-logging": "*",        
+        "grunt-remove-logging": "*",
         "grunt-uncss": "*",
         "grunt-sass": "*",
         "grunt-postcss": "*",
