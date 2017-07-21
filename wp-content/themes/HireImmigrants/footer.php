@@ -20,13 +20,46 @@
 <footer>
 	<div class="container">
 		<div class="footer__top">
-			
+			<div class="footer__logo">
+				<svg class="ico">
+					<use xlink:href="#logo-w"/>
+				</svg>
+				<span>Hire Immigrants</span>
+			</div>
+			<div class="social">
+				<a href="#" class="social__twitter">
+					<svg class="ico">
+						<use xlink:href="#twitter"/>
+					</svg>
+					Twitter
+				</a>
+				<a href="#" class="social__linkedin">
+					<svg class="ico">
+						<use xlink:href="#linkedin"/>
+					</svg>
+					Linkedin
+				</a>
+				<a href="#" class="social__rss">
+					<svg class="ico">
+						<use xlink:href="#rss"/>
+					</svg>
+					RSS
+				</a>
+			</div>
 		</div>
 		<div class="footer__middle">
-			
+			<p>Stay connected to the latest news about immigrant employment practices</p>
+			<ul class="footer__menu">
+				<li><a href="#">Read</a></li>
+				<li><a href="#">Watch</a></li>
+				<li><a href="#">Stories</a></li>
+				<li><a href="#">Reports</a></li>
+				<li><a href="#">About</a></li>
+				<li><a href="#">Contact</a></li>
+			</ul>
 		</div>
 		<div class="footer__bottom">
-			
+			<p>&copy; Hire Immigrants. All Rights Reserved.</p>
 		</div>
 	</div>
 </footer>

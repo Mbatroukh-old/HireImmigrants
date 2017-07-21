@@ -10,6 +10,13 @@ h6 {
 .overlay span, .category-grid span {
   font-family: "TruenoRegular"; }
 
+footer .footer__logo span {
+  font-family: "TruenoLight"; }
+footer .social a {
+  font-family: "TruenoRegular"; }
+footer .footer__middle p {
+  font-family: Georgia, Times, "Times New Roman", serif; }
+
 .container {
   width: 940px;
   display: block;
@@ -712,8 +719,9 @@ input[type="submit"] {
       color: #9b9b9b;
       font-size: 16px;
       letter-spacing: 3px;
-      margin-bottom: 15px;
-      font-family: "TruenoRegular"; }
+      margin-bottom: 20px;
+      font-family: "TruenoRegular";
+      text-transform: uppercase; }
     .newsletter .left h5 {
       font-size: 28px;
       color: #4a4a4a;
@@ -748,5 +756,59 @@ input[type="submit"] {
     content: "";
     display: block;
     clear: both; }
+
+footer {
+  background: #4a4b9b;
+  padding: 50px 0; }
+  footer .footer__top {
+    margin-bottom: 65px; }
+    footer .footer__top .footer__logo {
+      float: left; }
+      footer .footer__top .footer__logo .ico {
+        fill: #fff;
+        width: 37px;
+        height: 37px;
+        float: left;
+        margin-right: 12px; }
+      footer .footer__top .footer__logo span {
+        font-size: 20px;
+        color: #fff;
+        line-height: 37px; }
+    footer .footer__top .social {
+      float: right; }
+      footer .footer__top .social a {
+        padding: 18px 20px;
+        margin-left: 25px;
+        font-size: 16px;
+        text-decoration: none;
+        color: #fff;
+        border-radius: 2px;
+        line-height: 16px; }
+        footer .footer__top .social a .ico {
+          fill: #fff;
+          margin-right: 15px; }
+      footer .footer__top .social .social__twitter {
+        background: #1da1f2; }
+        footer .footer__top .social .social__twitter .ico {
+          width: 16px;
+          height: 13px; }
+      footer .footer__top .social .social__linkedin {
+        background: #0077b5; }
+        footer .footer__top .social .social__linkedin .ico {
+          width: 16px;
+          height: 16px; }
+      footer .footer__top .social .social__rss {
+        background: #ff9500; }
+        footer .footer__top .social .social__rss .ico {
+          width: 16px;
+          height: 16px; }
+    footer .footer__top:after {
+      content: "";
+      display: block;
+      clear: both; }
+  footer .footer__middle p {
+    font-size: 20px;
+    line-height: 34px;
+    color: #fff; }
 
 /*# sourceMappingURL=hire-immigrants.css.map */

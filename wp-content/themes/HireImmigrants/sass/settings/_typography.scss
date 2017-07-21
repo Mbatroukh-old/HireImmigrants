@@ -36,3 +36,20 @@ a{
 		font-family: $truenoReg;
 	}
 }
+footer{
+	.footer__logo{
+		span{
+			font-family: $truenoLight;
+		}
+	}
+	.social{
+		a{
+			font-family: $truenoReg;
+		}
+	}
+	.footer__middle{
+		p{
+			font-family: $georgia;
+		}
+	}
+}
