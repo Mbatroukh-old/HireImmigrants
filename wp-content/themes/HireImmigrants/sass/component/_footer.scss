@@ -29,6 +29,7 @@ footer{
 				color: $white;
 				border-radius: 2px;
 				line-height: 16px;
+				transition: all 0.2s;
 				.ico{
 					fill: $white;
 					margin-right: 15px;
@@ -40,6 +41,10 @@ footer{
 					width: 16px;
 					height: 13px;
 				}
+				&:hover{
+					background: darken($dodger-blue, 10%);
+					transition: all 0.2s;
+				}
 			}
 			.social__linkedin{
 				background: $deep-cerulean;
@@ -47,12 +52,20 @@ footer{
 					width: 16px;
 					height: 16px;
 				}
+				&:hover{
+					background: darken($deep-cerulean, 10%);
+					transition: all 0.2s;
+				}
 			}
 			.social__rss{
 				background: $pizzaz;
 				.ico{
 					width: 16px;
 					height: 16px;
+				}
+				&:hover{
+					background: darken($pizzaz, 10%);
+					transition: all 0.2s;
 				}
 			}
 		}
@@ -63,10 +76,44 @@ footer{
 		}
 	}
 	.footer__middle{
+		margin-bottom: 75px;
 		p{
 			font-size: 20px;
 			line-height: 34px;
 			color: $white;
+			width: 370px;
+			float: left;
+		}
+		ul{
+			float: right;
+			li{
+				float: left;
+				a{
+					text-decoration: none;
+					color: $white;
+					font-size: 16px;
+					opacity: 0.6;
+					margin-left: 30px;
+					transition: all 0.2s;
+					line-height: 68px;
+					&:hover{
+						opacity: 1;
+						transition: all 0.2s;
+					}
+				}
+			}
+		}
+		&:after{
+			content: "";
+			display: block;
+			clear: both;
+		}
+	}
+	.footer__bottom{
+		p{
+			font-size: 16px;
+			color: $white;
+			opacity: 0.5;
 		}
 	}
 }

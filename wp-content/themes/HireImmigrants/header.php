@@ -24,7 +24,7 @@
 			<?php /* wp_nav_menu( array( 'theme_location' => 'main-menu' ) ); */ ?>
 			<nav class="main-menu">
 				<ul>
-					<li><a href="#">Read</a></li>
+					<li><a href="/read">Read</a></li>
 					<li class="current"><a href="#">Watch</a></li>
 					<li><a href="#">Stories</a></li>
 					<li><a href="#">Reports</a></li>

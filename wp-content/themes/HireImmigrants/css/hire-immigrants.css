@@ -16,6 +16,10 @@ footer .social a {
   font-family: "TruenoRegular"; }
 footer .footer__middle p {
   font-family: Georgia, Times, "Times New Roman", serif; }
+footer ul a {
+  font-family: "TruenoRegular"; }
+footer .footer__bottom p {
+  font-family: "TruenoLight"; }
 
 .container {
   width: 940px;
@@ -783,7 +787,8 @@ footer {
         text-decoration: none;
         color: #fff;
         border-radius: 2px;
-        line-height: 16px; }
+        line-height: 16px;
+        transition: all 0.2s; }
         footer .footer__top .social a .ico {
           fill: #fff;
           margin-right: 15px; }
@@ -792,23 +797,59 @@ footer {
         footer .footer__top .social .social__twitter .ico {
           width: 16px;
           height: 13px; }
+        footer .footer__top .social .social__twitter:hover {
+          background: #0c85d0;
+          transition: all 0.2s; }
       footer .footer__top .social .social__linkedin {
         background: #0077b5; }
         footer .footer__top .social .social__linkedin .ico {
           width: 16px;
           height: 16px; }
+        footer .footer__top .social .social__linkedin:hover {
+          background: #005582;
+          transition: all 0.2s; }
       footer .footer__top .social .social__rss {
         background: #ff9500; }
         footer .footer__top .social .social__rss .ico {
           width: 16px;
           height: 16px; }
+        footer .footer__top .social .social__rss:hover {
+          background: #cc7700;
+          transition: all 0.2s; }
     footer .footer__top:after {
       content: "";
       display: block;
       clear: both; }
-  footer .footer__middle p {
-    font-size: 20px;
-    line-height: 34px;
-    color: #fff; }
+  footer .footer__middle {
+    margin-bottom: 75px; }
+    footer .footer__middle p {
+      font-size: 20px;
+      line-height: 34px;
+      color: #fff;
+      width: 370px;
+      float: left; }
+    footer .footer__middle ul {
+      float: right; }
+      footer .footer__middle ul li {
+        float: left; }
+        footer .footer__middle ul li a {
+          text-decoration: none;
+          color: #fff;
+          font-size: 16px;
+          opacity: 0.6;
+          margin-left: 30px;
+          transition: all 0.2s;
+          line-height: 68px; }
+          footer .footer__middle ul li a:hover {
+            opacity: 1;
+            transition: all 0.2s; }
+    footer .footer__middle:after {
+      content: "";
+      display: block;
+      clear: both; }
+  footer .footer__bottom p {
+    font-size: 16px;
+    color: #fff;
+    opacity: 0.5; }
 
 /*# sourceMappingURL=hire-immigrants.css.map */
