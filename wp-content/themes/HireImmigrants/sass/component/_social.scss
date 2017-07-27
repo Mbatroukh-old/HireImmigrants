@@ -1,0 +1,65 @@
+.social{
+	a{
+		padding: 18px 20px;
+		margin-left: 25px;
+		font-size: 16px;
+		text-decoration: none;
+		color: $white;
+		border-radius: 2px;
+		line-height: 16px;
+		transition: all 0.2s;
+		.ico{
+			fill: $white;
+			margin-right: 15px;
+		}
+	}
+	.social__twitter{
+		background: $dodger-blue;
+		.ico{
+			width: 16px;
+			height: 13px;
+		}
+		&:hover{
+			background: darken($dodger-blue, 10%);
+			transition: all 0.2s;
+		}
+	}
+	.social__linkedin{
+		background: $deep-cerulean;
+		.ico{
+			width: 16px;
+			height: 16px;
+		}
+		&:hover{
+			background: darken($deep-cerulean, 10%);
+			transition: all 0.2s;
+		}
+	}
+	.social__rss{
+		background: $pizzaz;
+		.ico{
+			width: 16px;
+			height: 16px;
+		}
+		&:hover{
+			background: darken($pizzaz, 10%);
+			transition: all 0.2s;
+		}
+	}
+	.social__facebook{
+		background: $chambray;
+		.ico{
+			width: 16px;
+			height: 16px;
+		}
+		&:hover{
+			background: darken($chambray, 10%);
+			transition: all 0.2s;
+		}
+	}
+	&:after{
+		content: "";
+		display: block;
+		clear: both;
+	}
+}

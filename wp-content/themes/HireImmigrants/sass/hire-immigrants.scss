@@ -36,6 +36,8 @@
 @import "base/vendor";
 // Object -- Objects and abstractions.
 @import "object/header";
+@import "object/article";
+@import "object/footer";
 // Components -- Your designed UI elements
 @import "component/navigation";
 @import "component/banner";
@@ -44,5 +46,10 @@
 @import "component/category-grid";
 @import "component/explore-highlights";
 @import "component/newsletter";
-@import "component/footer";
+@import "component/sub-category-row";
+@import "component/article-group";
+@import "component/social";
+@import "component/page-header";
+@import "component/article-share";
+@import "component/breadcrumbs";
 // Trumps -- Overrides and helper classes

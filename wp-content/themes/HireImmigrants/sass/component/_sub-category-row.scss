@@ -1,0 +1,44 @@
+.subcats{
+	background: rgba(74, 75, 155, .1);
+	padding: 45px 0;
+	margin-bottom: 80px;
+	.subcats__wrap{
+		
+		a{
+			font-size: 20px;
+			color: $tundora;
+			text-decoration: none;
+			text-align: center;
+			float: left;
+			margin: 0 75px;
+			.ico{
+				fill: $victoria;
+				display: block;
+				margin: 0 auto 20px auto;
+				height: 48px;
+			}
+			&.news .ico{
+				width: 53px;
+			}
+			&.think .ico{
+				width: 48px;
+			}
+			&.qna .ico{
+				width: 51px;
+			}
+			&.announcements .ico{
+				width: 67px;
+			}
+			&:hover{
+				.ico{
+					fill: darken($victoria, 10%);
+				}
+			}
+		}
+		&:after{
+			content: "";
+			display: block;
+			clear: both;
+		}
+	}
+}

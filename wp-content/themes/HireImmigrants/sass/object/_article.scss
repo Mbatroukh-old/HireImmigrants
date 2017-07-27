@@ -1,0 +1,75 @@
+.single__article{
+	
+	.article__image{
+		display: block;
+		margin-bottom: 38px;
+	}
+	.date{
+		color: $dusty-gray;
+		font-size: 18px;
+		font-family: $truenoLight;
+		display: block;
+		margin-bottom: 12px;
+	}
+	h1{
+		font-size: 48px;
+		line-height: 64px;
+		font-family: $truenoLight;
+		display: block;
+		margin-bottom: 55px;
+		color: $tundora;
+	}
+	.post__info{
+		display: block;
+		margin-bottom: 55px;
+		.author{
+			float: left;
+			margin-right: 50px;
+			span{
+				color: $tundora;
+				display: block;
+				&:first-child{
+					font-family: $truenoReg;
+					font-size: 16px;
+					margin-bottom: 10px;
+				}
+				&:last-child{
+					font-family: $truenoLight;
+					font-size: 14px; 
+				}
+			}
+		}
+		.country{
+			float: left;
+			line-height: 24px;
+			padding: 8px 0;
+			font-size: 16px;
+			color: $tundora;
+			font-family: $truenoLight;
+			margin-right: 50px;
+			img{
+				float: left;
+				margin-right: 10px;
+			}
+		}
+		&:after{
+			content: "";
+			display: block;
+			clear: both;
+		}
+	}
+	.article__content{
+		display: block;
+		padding-bottom: 95px;
+		border-bottom: solid 1px $gallery;
+		margin-bottom: 75px;
+		p{
+			font-size: 20px;
+			font-family: $georgia;
+			line-height: 34px;
+			display: block;
+			margin-bottom: 40px;
+			color: $tundora;
+		}
+	}
+}

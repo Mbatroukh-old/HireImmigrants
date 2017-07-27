@@ -5,22 +5,26 @@ h1, h2, h3, h4, h5, h6{
 	font-family: $truenoSemiBold;
 }
 h1{
-
+	font-family: $truenoReg;
+	// font-size: 48px;
 }
 h2{
 	font-size: 40px;
 }
 h3{
-
+	font-family: $truenoReg;
+	// font-size: 36px;
 }
 h4{
-
+	font-family: $truenoLight;
+	// font-size: 28px;
 }
 h5{
-
+	// font-size: 24px;
 }
 h6{
 	font-size: 22px;
+	// font-size: 20px;
 }
 p{
 
@@ -35,6 +39,32 @@ a{
 	span{
 		font-family: $truenoReg;
 	}
+}
+.subcats a{
+	font-family: $truenoLight;
+}
+.catgroup .catgroup__title{
+	font-family: $truenoReg;
+}
+.catgroup .catgroup__subtitle{
+	font-family: $georgia;
+}
+.catgroup__blocks .date, .catgroup__blocks .country, .catgroup__blocks .tag,
+.post__group .date, .post__group .country, .post__group .tag
+{
+	font-family: $truenoLight;
+}
+.catgroup__blocks p, .post__group p{
+	font-family: $georgia;
+}
+.catgroup__list span{
+	font-family: $truenoLight;
+}
+ul.breadcrumbs li{
+	font-family: $truenoLight;
+}
+.page-header span{
+	font-family: $georgia;	
 }
 footer{
 	.footer__logo{
