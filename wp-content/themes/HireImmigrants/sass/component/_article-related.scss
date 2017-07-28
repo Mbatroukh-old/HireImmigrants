@@ -1,0 +1,69 @@
+.article__related{
+	width: 800px;
+	margin: 0 auto;
+	h4{
+		display: block;
+		text-align: center;
+		font-size: 24px;
+		font-family: $truenoReg;
+		color: $tundora;
+		margin-bottom: 45px;
+	}
+	a{
+		border: solid 1px $silver;
+		padding: 15px 25px;
+		float: left;
+		width: 47%;
+		margin-right: 6%;
+		box-sizing: border-box;
+		border-radius: 2px;
+		font-family: $truenoLight;
+		text-decoration: none;
+		&:last-child{
+			margin-right: 0;
+		}
+		.post__image{
+			height: 130px;
+			display: block;
+			background-size: cover;
+			background-position: center;
+			margin-bottom: 15px;
+		}
+		.date{
+			font-size: 14px;
+			color: $dusty-gray;
+			margin-right: 23px;
+			float: left;
+			line-height: 20px;
+			margin-bottom: 10px;
+		}
+		.country{
+			float: left;
+			color: $tundora;
+			font-size: 14px;
+			line-height: 20px;
+			img{
+				height: 20px;
+				width: 28px;
+				float: left;
+				margin-right: 10px;
+			}
+		}
+		.tag{
+			float: left;
+			line-height: 20px;
+			font-size: 14px;
+			background: $buttercup;
+			color: $white;
+			padding: 0 8px;
+			border-radius: 2px;
+		}
+		.title{
+			clear: both;
+			display: block;
+			font-size: 20px;
+			line-height: 30px;
+			color: $tundora;
+		}
+	}
+}

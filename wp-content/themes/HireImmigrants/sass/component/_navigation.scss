@@ -11,7 +11,7 @@ nav.main-menu{
 				text-decoration: none;
 				transition: all 0.2s;
 			}
-			&.current, &:hover{
+			&.current-menu-item, &:hover{
 				a{
 					color: $victoria;
 					transition: all 0.2s;

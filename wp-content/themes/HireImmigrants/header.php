@@ -13,7 +13,7 @@
 <header>
 	<div class="container">
 		<div class="left">			
-			<a href="#" class="logo">
+			<a href="/" class="logo">
 				<svg class="ico">
 					<use xlink:href="#logo-c"/>
 				</svg>
@@ -21,15 +21,11 @@
 			</a>
 		</div>
 		<div class="right">
-			<?php /* wp_nav_menu( array( 'theme_location' => 'main-menu' ) ); */ ?>
-			<nav class="main-menu">
-				<ul>
-					<li><a href="/read">Read</a></li>
-					<li class="current"><a href="#">Watch</a></li>
-					<li><a href="#">Stories</a></li>
-					<li><a href="#">Reports</a></li>
-					<li><a href="#">Contact</a></li>
-				</ul>
+			<?php wp_nav_menu( array( 
+				'menu' => 'Main Navigation',
+				'container' => 'nav',
+				'container_class' => 'main-menu'
+			) ); ?>
 			</nav>
 			<a class="search">
 				<svg class="ico">

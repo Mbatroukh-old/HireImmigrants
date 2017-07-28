@@ -49,14 +49,7 @@
 		</div>
 		<div class="footer__middle">
 			<p>Stay connected to the latest news about immigrant employment practices</p>
-			<ul class="footer__menu">
-				<li><a href="#">Read</a></li>
-				<li><a href="#">Watch</a></li>
-				<li><a href="#">Stories</a></li>
-				<li><a href="#">Reports</a></li>
-				<li><a href="#">About</a></li>
-				<li><a href="#">Contact</a></li>
-			</ul>
+			<?php wp_nav_menu( array( 'menu' => 'Footer Navigation' ) ); ?>
 		</div>
 		<div class="footer__bottom">
 			<p>&copy; Hire Immigrants. All Rights Reserved.</p>

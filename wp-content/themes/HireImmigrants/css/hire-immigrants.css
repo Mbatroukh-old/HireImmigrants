@@ -628,7 +628,7 @@ nav.main-menu {
       font-size: 16px;
       text-decoration: none;
       transition: all 0.2s; }
-    nav.main-menu ul li.current a, nav.main-menu ul li:hover a {
+    nav.main-menu ul li.current-menu-item a, nav.main-menu ul li:hover a {
       color: #4a4b9b;
       transition: all 0.2s; }
 
@@ -1202,6 +1202,66 @@ input[type="submit"] {
     content: "";
     display: block;
     clear: both; }
+
+.article__related {
+  width: 800px;
+  margin: 0 auto; }
+  .article__related h4 {
+    display: block;
+    text-align: center;
+    font-size: 24px;
+    font-family: "TruenoRegular";
+    color: #4a4a4a;
+    margin-bottom: 45px; }
+  .article__related a {
+    border: solid 1px #cdcdcd;
+    padding: 15px 25px;
+    float: left;
+    width: 47%;
+    margin-right: 6%;
+    box-sizing: border-box;
+    border-radius: 2px;
+    font-family: "TruenoLight";
+    text-decoration: none; }
+    .article__related a:last-child {
+      margin-right: 0; }
+    .article__related a .post__image {
+      height: 130px;
+      display: block;
+      background-size: cover;
+      background-position: center;
+      margin-bottom: 15px; }
+    .article__related a .date {
+      font-size: 14px;
+      color: #9b9b9b;
+      margin-right: 23px;
+      float: left;
+      line-height: 20px;
+      margin-bottom: 10px; }
+    .article__related a .country {
+      float: left;
+      color: #4a4a4a;
+      font-size: 14px;
+      line-height: 20px; }
+      .article__related a .country img {
+        height: 20px;
+        width: 28px;
+        float: left;
+        margin-right: 10px; }
+    .article__related a .tag {
+      float: left;
+      line-height: 20px;
+      font-size: 14px;
+      background: #f5a623;
+      color: #fff;
+      padding: 0 8px;
+      border-radius: 2px; }
+    .article__related a .title {
+      clear: both;
+      display: block;
+      font-size: 20px;
+      line-height: 30px;
+      color: #4a4a4a; }
 
 ul.breadcrumbs {
   background: rgba(74, 75, 155, 0.1);

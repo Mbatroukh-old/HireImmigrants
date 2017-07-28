@@ -58,13 +58,13 @@
 			<div class="post__image" style="background-image: url('<?php echo get_template_directory_uri(); ?>/i/filler-5.png')"></div>
 			<span class="date">April 6, 2017</span>
 			<span class="country"><img src="<?php echo get_template_directory_uri(); ?>/i/can.png" alt="">Canada</span>
-			<h4>10 simple tips why diversity is good for business</h4>
+			<span class="title">10 simple tips why diversity is good for business</span>
 		</a>
 		<a href="#">
 			<div class="post__image" style="background-image: url('<?php echo get_template_directory_uri(); ?>/i/filler-5.png')"></div>
 			<span class="date">April 6, 2017</span>
-			<span class="country"><img src="<?php echo get_template_directory_uri(); ?>/i/can.png" alt="">Canada</span>
-			<h4>10 simple tips why diversity is good for business</h4>
+			<span class="tag">Hire</span>
+			<span class="title">10 simple tips why diversity is good for business</span>
 		</a>
 	</div>
 </div>
