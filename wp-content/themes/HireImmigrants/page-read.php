@@ -39,27 +39,27 @@ get_header(); ?>
 			<span class="catgroup__subtitle">In the news</span>
 		</div>
 		<div class="post__group">
-			<a href="#">
+			<div class="post">
 				<div class="post__image" style="background-image: url('<?php echo get_template_directory_uri(); ?>/i/filler-5.png')"></div>
 				<span class="date">April 6, 2017</span>
 				<span class="country"><img src="<?php echo get_template_directory_uri(); ?>/i/can.png" alt="">Canada</span>
 				<h4>10 simple tips why diversity is good for business</h4>
 				<p>We cannot concieve of a thought divorced from brainwaves. a statments which remains a mere</p>
-			</a>
-			<a href="#">
+			</div>
+			<div class="post">
 				<div class="post__image" style="background-image: url('<?php echo get_template_directory_uri(); ?>/i/filler-5.png')"></div>
 				<span class="date">April 6, 2017</span>
 				<span class="country"><img src="<?php echo get_template_directory_uri(); ?>/i/can.png" alt="">Canada</span>
 				<h4>10 simple tips why diversity is good for business</h4>
 				<p>We cannot concieve of a thought divorced from brainwaves. a statments which remains a mere</p>
-			</a>
-			<a href="#">
+			</div>
+			<div class="post">
 				<div class="post__image" style="background-image: url('<?php echo get_template_directory_uri(); ?>/i/filler-5.png')"></div>
 				<span class="date">April 6, 2017</span>
 				<span class="country"><img src="<?php echo get_template_directory_uri(); ?>/i/can.png" alt="">Canada</span>
 				<h4>10 simple tips why diversity is good for business</h4>
 				<p>We cannot concieve of a thought divorced from brainwaves. a statments which remains a mere</p>
-			</a>
+			</div>
 		</div>
 		<a href="#" class="btn btn-arrow purple">
 			View All
@@ -75,27 +75,27 @@ get_header(); ?>
 			<span class="catgroup__subtitle">Global thought leadership</span>
 		</div>
 		<div class="post__group">
-			<a href="#">
+			<div class="post">
 				<div class="post__image" style="background-image: url('<?php echo get_template_directory_uri(); ?>/i/filler-5.png')"></div>
 				<span class="date">April 6, 2017</span>
 				<span class="tag">Hire</span>
 				<h4>10 simple tips why diversity is good for business</h4>
 				<p>We cannot concieve of a thought divorced from brainwaves. a statments which remains a mere</p>
-			</a>
-			<a href="#">
+			</div>
+			<div class="post">
 				<div class="post__image" style="background-image: url('<?php echo get_template_directory_uri(); ?>/i/filler-5.png')"></div>
 				<span class="date">April 6, 2017</span>
 				<span class="tag">Hire</span>
 				<h4>10 simple tips why diversity is good for business</h4>
 				<p>We cannot concieve of a thought divorced from brainwaves. a statments which remains a mere</p>
-			</a>
-			<a href="#">
+			</div>
+			<div class="post">
 				<div class="post__image" style="background-image: url('<?php echo get_template_directory_uri(); ?>/i/filler-5.png')"></div>
 				<span class="date">April 6, 2017</span>
 				<span class="tag">Hire</span>
 				<h4>10 simple tips why diversity is good for business</h4>
 				<p>We cannot concieve of a thought divorced from brainwaves. a statments which remains a mere</p>
-			</a>
+			</div>
 
 		</div>
 		<a href="#" class="btn btn-arrow purple">
@@ -112,27 +112,27 @@ get_header(); ?>
 			<span class="catgroup__subtitle">Your questions answered</span>
 		</div>
 		<div class="post__group">
-			<a href="#">
+			<div class="post">
 				<div class="post__image" style="background-image: url('<?php echo get_template_directory_uri(); ?>/i/filler-5.png')"></div>
 				<span class="date">April 6, 2017</span>
 				<span class="country"><img src="<?php echo get_template_directory_uri(); ?>/i/can.png" alt="">Canada</span>
 				<h4>10 simple tips why diversity is good for business</h4>
 				<p>We cannot concieve of a thought divorced from brainwaves. a statments which remains a mere</p>
-			</a>
-			<a href="#">
+			</div>
+			<div class="post">
 				<div class="post__image" style="background-image: url('<?php echo get_template_directory_uri(); ?>/i/filler-5.png')"></div>
 				<span class="date">April 6, 2017</span>
 				<span class="country"><img src="<?php echo get_template_directory_uri(); ?>/i/can.png" alt="">Canada</span>
 				<h4>10 simple tips why diversity is good for business</h4>
 				<p>We cannot concieve of a thought divorced from brainwaves. a statments which remains a mere</p>
-			</a>
-			<a href="#">
+			</div>
+			<div class="post">
 				<div class="post__image" style="background-image: url('<?php echo get_template_directory_uri(); ?>/i/filler-5.png')"></div>
 				<span class="date">April 6, 2017</span>
 				<span class="country"><img src="<?php echo get_template_directory_uri(); ?>/i/can.png" alt="">Canada</span>
 				<h4>10 simple tips why diversity is good for business</h4>
 				<p>We cannot concieve of a thought divorced from brainwaves. a statments which remains a mere</p>
-			</a>
+			</div>
 		</div>
 		<a href="#" class="btn btn-arrow purple">
 			View All

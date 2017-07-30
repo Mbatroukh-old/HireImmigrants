@@ -3,6 +3,9 @@
 	.article__image{
 		display: block;
 		margin-bottom: 38px;
+		img{
+			width: 100%
+		}
 	}
 	.date{
 		color: $dusty-gray;
@@ -70,6 +73,13 @@
 			display: block;
 			margin-bottom: 40px;
 			color: $tundora;
+		}
+	}
+	&.single__article--video{
+
+		.article__content{
+			padding-bottom: 0;
+			border-bottom: none;
 		}
 	}
 }

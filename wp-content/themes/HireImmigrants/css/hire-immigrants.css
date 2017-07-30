@@ -505,6 +505,8 @@ header {
 .single__article .article__image {
   display: block;
   margin-bottom: 38px; }
+  .single__article .article__image img {
+    width: 100%; }
 .single__article .date {
   color: #9b9b9b;
   font-size: 18px;
@@ -561,6 +563,9 @@ header {
     display: block;
     margin-bottom: 40px;
     color: #4a4a4a; }
+.single__article.single__article--video .article__content {
+  padding-bottom: 0;
+  border-bottom: none; }
 
 footer {
   background: #4a4b9b;
@@ -677,7 +682,8 @@ nav.main-menu {
   text-decoration: none;
   transition: all 0.2s;
   font-family: "TruenoRegular";
-  border-radius: 3px; }
+  border-radius: 3px;
+  cursor: pointer; }
 
 .purple {
   color: #fff;
@@ -990,7 +996,7 @@ input[type="submit"] {
   .catgroup .post__group {
     display: block;
     margin-bottom: 24px; }
-    .catgroup .post__group a {
+    .catgroup .post__group .post {
       padding: 24px;
       text-decoration: none;
       color: #4a4a4a;
@@ -999,66 +1005,69 @@ input[type="submit"] {
       box-sizing: border-box;
       float: left;
       margin-bottom: 24px; }
-      .catgroup .post__group a .post__image {
+      .catgroup .post__group .post .post__image {
         display: block;
         background-position: center;
         background-size: cover; }
-      .catgroup .post__group a:first-child {
+      .catgroup .post__group .post a {
+        text-decoration: none;
+        color: #4a4a4a; }
+      .catgroup .post__group .post:first-child {
         width: 58%;
         margin-right: 2%; }
-        .catgroup .post__group a:first-child .post__image {
+        .catgroup .post__group .post:first-child .post__image {
           margin-bottom: 30px;
           height: 290px !important; }
-        .catgroup .post__group a:first-child .date {
+        .catgroup .post__group .post:first-child .date {
           font-size: 18px;
           line-height: 24px; }
-        .catgroup .post__group a:first-child .country {
+        .catgroup .post__group .post:first-child .country {
           line-height: 24px; }
-          .catgroup .post__group a:first-child .country img {
+          .catgroup .post__group .post:first-child .country img {
             width: 34px; }
-        .catgroup .post__group a:first-child .tag {
+        .catgroup .post__group .post:first-child .tag {
           line-height: 24px;
           padding: 3px 13px; }
-        .catgroup .post__group a:first-child h4 {
+        .catgroup .post__group .post:first-child h4 {
           font-size: 34px;
           line-height: 46px; }
-      .catgroup .post__group a:nth-child(2), .catgroup .post__group a:nth-child(3) {
+      .catgroup .post__group .post:nth-child(2), .catgroup .post__group .post:nth-child(3) {
         width: 40%; }
-        .catgroup .post__group a:nth-child(2) h4, .catgroup .post__group a:nth-child(3) h4 {
+        .catgroup .post__group .post:nth-child(2) h4, .catgroup .post__group .post:nth-child(3) h4 {
           font-size: 20px;
           line-height: 30px;
           margin-bottom: 0; }
-        .catgroup .post__group a:nth-child(2) .post__image, .catgroup .post__group a:nth-child(3) .post__image {
+        .catgroup .post__group .post:nth-child(2) .post__image, .catgroup .post__group .post:nth-child(3) .post__image {
           margin-bottom: 30px;
           height: 95px !important; }
-        .catgroup .post__group a:nth-child(2) p, .catgroup .post__group a:nth-child(3) p {
+        .catgroup .post__group .post:nth-child(2) p, .catgroup .post__group .post:nth-child(3) p {
           display: none; }
-      .catgroup .post__group a:nth-child(n+4) {
+      .catgroup .post__group .post:nth-child(n+4) {
         width: 49%;
         float: left; }
-        .catgroup .post__group a:nth-child(n+4):nth-child(odd) {
+        .catgroup .post__group .post:nth-child(n+4):nth-child(odd) {
           margin-left: 2%; }
-        .catgroup .post__group a:nth-child(n+4) .post__image {
+        .catgroup .post__group .post:nth-child(n+4) .post__image {
           display: block;
           height: 145px;
           margin-bottom: 20px; }
-        .catgroup .post__group a:nth-child(n+4) .date {
+        .catgroup .post__group .post:nth-child(n+4) .date {
           color: #9b9b9b;
           font-size: 16px;
           margin-right: 35px;
           float: left;
           line-height: 20px; }
-        .catgroup .post__group a:nth-child(n+4) .country {
+        .catgroup .post__group .post:nth-child(n+4) .country {
           font-size: 16px;
           line-height: 20px;
           float: left;
           margin-bottom: 15px; }
-          .catgroup .post__group a:nth-child(n+4) .country img {
+          .catgroup .post__group .post:nth-child(n+4) .country img {
             width: 28px;
             display: inline-block;
             margin-right: 10px;
             float: left; }
-        .catgroup .post__group a:nth-child(n+4) .tag {
+        .catgroup .post__group .post:nth-child(n+4) .tag {
           font-size: 14px;
           color: #fff;
           background: #f5a623;
@@ -1066,38 +1075,38 @@ input[type="submit"] {
           line-height: 20px;
           padding: 3px 10px;
           text-transform: uppercase; }
-        .catgroup .post__group a:nth-child(n+4) h4 {
+        .catgroup .post__group .post:nth-child(n+4) h4 {
           font-size: 24px;
           line-height: 36px; }
-        .catgroup .post__group a:nth-child(n+4) p {
+        .catgroup .post__group .post:nth-child(n+4) p {
           font-size: 20px;
           line-height: 34px;
           display: block; }
-      .catgroup .post__group a h4 {
+      .catgroup .post__group .post h4 {
         clear: both;
         display: block;
         margin-bottom: 10px; }
-      .catgroup .post__group a > img {
+      .catgroup .post__group .post > img {
         display: block;
         width: 100%;
         margin-bottom: 16px; }
-      .catgroup .post__group a .date {
+      .catgroup .post__group .post .date {
         color: #9b9b9b;
         font-size: 16px;
         margin-right: 35px;
         float: left;
         line-height: 20px; }
-      .catgroup .post__group a .country {
+      .catgroup .post__group .post .country {
         font-size: 16px;
         line-height: 20px;
         float: left;
         margin-bottom: 15px; }
-        .catgroup .post__group a .country img {
+        .catgroup .post__group .post .country img {
           width: 28px;
           display: inline-block;
           margin-right: 10px;
           float: left; }
-      .catgroup .post__group a .tag {
+      .catgroup .post__group .post .tag {
         font-size: 14px;
         color: #fff;
         background: #f5a623;
@@ -1105,10 +1114,57 @@ input[type="submit"] {
         line-height: 20px;
         padding: 3px 10px;
         text-transform: uppercase; }
-      .catgroup .post__group a p {
+      .catgroup .post__group .post .organization {
+        border: solid 1px #eeeeee;
+        padding: 20px 25px;
+        margin-top: 5px;
+        margin-bottom: 25px;
+        display: inline-block;
+        border-radius: 2px;
+        font-size: 16px;
+        color: #4a4a4a; }
+      .catgroup .post__group .post p {
         font-size: 20px;
         line-height: 34px;
         display: block; }
+      .catgroup .post__group .post:after {
+        content: "";
+        display: block;
+        clear: both; }
+    .catgroup .post__group.post__group--videos .post .post__image {
+      position: relative; }
+      .catgroup .post__group.post__group--videos .post .post__image img {
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        margin: auto; }
+    .catgroup .post__group.post__group--videos .post h4 {
+      margin-bottom: 25px; }
+    .catgroup .post__group.post__group--videos .post:first-child {
+      width: 100%;
+      margin-right: 0; }
+      .catgroup .post__group.post__group--videos .post:first-child .post__image img {
+        display: none; }
+      .catgroup .post__group.post__group--videos .post:first-child .speaker {
+        float: left;
+        width: 49%; }
+        .catgroup .post__group.post__group--videos .post:first-child .speaker:first-child {
+          margin-right: 2%; }
+    .catgroup .post__group.post__group--videos .post:nth-child(n+2) {
+      width: 49%;
+      margin-right: 2%; }
+      .catgroup .post__group.post__group--videos .post:nth-child(n+2) .post__image {
+        margin-bottom: 30px;
+        height: 190px !important; }
+      .catgroup .post__group.post__group--videos .post:nth-child(n+2) .speaker {
+        display: block;
+        float: none;
+        clear: both;
+        margin-bottom: 25px; }
+    .catgroup .post__group.post__group--videos .post:nth-child(3) {
+      margin-right: 0; }
     .catgroup .post__group:after {
       content: "";
       display: block;
@@ -1262,6 +1318,41 @@ input[type="submit"] {
       font-size: 20px;
       line-height: 30px;
       color: #4a4a4a; }
+
+.speakers {
+  display: block;
+  margin-bottom: 35px; }
+  .speakers img {
+    float: left;
+    margin-right: 15px; }
+  .speakers .speaker .speaker__info {
+    float: left;
+    color: #4a4a4a;
+    padding: 4px 0; }
+    .speakers .speaker .speaker__info .name {
+      font-family: "TruenoRegular";
+      font-size: 16px;
+      display: block;
+      margin-bottom: 10px; }
+    .speakers .speaker .speaker__info .speaker__organization {
+      font-family: "TruenoLight";
+      font-size: 14px; }
+  .speakers .speaker:after {
+    content: "";
+    display: block;
+    clear: both; }
+  .speakers:after {
+    content: "";
+    display: block;
+    clear: both; }
+
+.single__article .speaker {
+  display: inline-block;
+  border: solid 1px #eeeeee;
+  box-sizing: border-box;
+  margin-right: 2%;
+  border-radius: 2px;
+  padding: 10px 12px; }
 
 ul.breadcrumbs {
   background: rgba(74, 75, 155, 0.1);
