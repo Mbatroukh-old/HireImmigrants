@@ -3,14 +3,16 @@
 	padding: 45px 0;
 	margin-bottom: 80px;
 	.subcats__wrap{
-		
+		display: flex;
+		justify-content: space-around;
+
 		a{
+			flex-grow: 1;
 			font-size: 20px;
 			color: $tundora;
 			text-decoration: none;
 			text-align: center;
-			float: left;
-			margin: 0 75px;
+			
 			.ico{
 				fill: $victoria;
 				display: block;

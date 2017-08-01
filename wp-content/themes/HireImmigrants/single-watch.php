@@ -10,7 +10,15 @@
 	<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
 		<div class="single__article single__article--video">
 			<div class="article__image"><?php the_post_thumbnail(); ?></div>
-			<span class="date"><?php the_field('date_of_webinar'); ?> &nbsp;|&nbsp; <?php the_field('webinar_start_time'); ?> - <?php the_field('webinar_end_time'); ?> EST</span>
+			<!-- If Webinars, then display date/start and end times, else display duration -->
+			<?php $terms = get_the_terms( $post->ID , 'watch' );
+				foreach ( $terms as $term ) {
+					if($term->name === 'Webinars'){?>
+						<span class="date"><?php the_field('date_of_webinar'); ?> &nbsp;|&nbsp; <?php the_field('webinar_start_time'); ?> - <?php the_field('webinar_end_time'); ?> EST</span>
+					<?php } else { ?>
+						<span class="date"><?php the_field('duration_of_video'); ?></span>
+					<?php }
+				} ?>
 			<h1><?php the_title(); ?></h1>
 			<div class="speakers">
 				<?php 
@@ -34,12 +42,14 @@
 				<?php the_content(); ?>
 			</div>
 			<!-- IF IN THE FUTURE THEN DISPLAY THIS BUTTON ELSE HIDE IT -->
-			<a href="<?php the_field('registration_link'); ?>" class="btn btn-arrow purple" target="_blank">
-				Register
-				<svg class="ico">
-					<use xlink:href="#arrow"/>
-				</svg>
-			</a>
+			<?php if($term->name === 'Webinars'){?>
+				<a href="<?php the_field('registration_link'); ?>" class="btn btn-arrow purple" target="_blank">
+					Register
+					<svg class="ico">
+						<use xlink:href="#arrow"/>
+					</svg>
+				</a>
+			<?php } ?>
 		</div>
 	<?php endwhile; endif; ?>
 </div>

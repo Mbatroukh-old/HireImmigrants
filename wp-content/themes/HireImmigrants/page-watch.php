@@ -4,19 +4,19 @@ get_header(); ?>
 <div class="subcats">
 	<div class="container">
 		<div class="subcats__wrap">
-			<a href="#" class="news">
+			<a href="/watch_categories/webinars/" class="news">
 				<svg class="ico">
 					<use xlink:href="#webinars"/>
 				</svg>
 				Webinars
 			</a>
-			<a href="#" class="think">
+			<a href="/watch_categories/employer-videos/" class="think">
 				<svg class="ico">
 					<use xlink:href="#employer-videos"/>
 				</svg>
 				Employer Videos
 			</a>
-			<a href="#" class="qna">
+			<a href="/watch_categories/e-learning/" class="qna">
 				<svg class="ico">
 					<use xlink:href="#elearning"/>
 				</svg>
@@ -35,6 +35,7 @@ get_header(); ?>
 		<div class="post__group post__group--videos">
 			<?php $the_query = new WP_Query( array(
 			    'post_type' => 'watch',
+			    'posts_per_page' => 3,
 			    'tax_query' => array(
 			        array (
 			            'taxonomy' => 'watch_categories',
@@ -98,6 +99,7 @@ get_header(); ?>
 		<div class="post__group post__group--videos">
 			<?php $the_query = new WP_Query( array(
 			    'post_type' => 'watch',
+			    'posts_per_page' => 3,
 			    'tax_query' => array(
 			        array (
 			            'taxonomy' => 'watch_categories',
@@ -114,7 +116,7 @@ get_header(); ?>
 							<img src="<?php echo get_template_directory_uri(); ?>/i/play.png">
 						</div>
 					</a>
-					<span class="date">60 minutes</span>
+					<span class="date"><?php the_field('duration_of_video'); ?></span>
 					<span class="tag">Hire</span>
 					<h4><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h4>
 					<span class="organization"><?php the_field('organization'); ?></span>
@@ -138,6 +140,7 @@ get_header(); ?>
 		<div class="post__group post__group--videos">
 			<?php $the_query = new WP_Query( array(
 			    'post_type' => 'watch',
+			    'posts_per_page' => 3,
 			    'tax_query' => array(
 			        array (
 			            'taxonomy' => 'watch_categories',
@@ -154,7 +157,7 @@ get_header(); ?>
 							<img src="<?php echo get_template_directory_uri(); ?>/i/play.png">
 						</div>
 					</a>
-					<span class="date">60 minutes</span>
+					<span class="date"><?php the_field('duration_of_video'); ?></span>
 					<span class="tag">Hire</span>
 					<h4><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h4>
 					<span class="organization"><?php the_field('organization'); ?></span>
