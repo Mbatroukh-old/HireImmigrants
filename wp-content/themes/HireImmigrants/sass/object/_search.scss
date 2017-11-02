@@ -9,8 +9,9 @@
 		color: $tundora;
 		font-size: 24px;
 		border-bottom: solid 1px $dusty-gray;
-		line-height: 50px;
+		line-height: 28px;
 		transition: all 0.2s;
+		padding: 15px 0 13px 0;
 		&:hover{
 			color: $victoria;
 			transition: all 0.2s;

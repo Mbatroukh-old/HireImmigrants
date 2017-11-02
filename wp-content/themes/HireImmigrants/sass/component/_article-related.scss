@@ -1,6 +1,9 @@
 .article__related{
 	width: 800px;
 	margin: 0 auto;
+	@include respond(screen-med-sm){
+		width: 100%;
+	}
 	h4{
 		display: block;
 		text-align: center;
@@ -8,6 +11,9 @@
 		font-family: $truenoReg;
 		color: $tundora;
 		margin-bottom: 45px;
+		@include respond(screen-xs){
+			text-align: left;
+		}
 	}
 	a{
 		border: solid 1px $silver;
@@ -19,6 +25,13 @@
 		border-radius: 2px;
 		font-family: $truenoLight;
 		text-decoration: none;
+		@include respond(screen-xs){
+			width: 100%;
+			margin-right: 0;
+			float: none;
+			display: block;
+			margin-bottom: 15px;
+		}
 		&:last-child{
 			margin-right: 0;
 		}

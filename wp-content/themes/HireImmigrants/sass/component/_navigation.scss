@@ -91,6 +91,9 @@ nav.main-menu{
 	.search-form{
 		border: solid 1px $tundora;
 		border-radius: 2px;
+		@include respond(screen-less-than-xlarge){
+			display: flex;
+		}
 		&:after{
 			content: "";
 			display: block;
@@ -102,6 +105,10 @@ nav.main-menu{
 			float: left;
 			padding: 14px 0 14px 12px;
 			box-sizing: border-box;
+			@include respond(screen-less-than-xlarge){
+				// border: solid 1px black;
+				padding-right: 15px;
+			}
 			.ico{
 				fill: $tundora;
 				width: 20px;
@@ -119,6 +126,10 @@ nav.main-menu{
 			padding-left: 12px;
 			background: transparent;
 			box-sizing: border-box;
+			@include respond(screen-less-than-xlarge){
+				// border: solid 1px black;
+				flex: 1;
+			}
 		}
 	}
 }

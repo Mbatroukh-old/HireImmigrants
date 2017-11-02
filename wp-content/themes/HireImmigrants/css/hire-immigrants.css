@@ -2159,6 +2159,9 @@ header {
   margin-bottom: 12px;
   float: left;
   margin-right: 25px; }
+  @media only screen and (max-width: 767px) {
+    .single__article .date {
+      font-size: 16px; } }
 
 .single__article h1 {
   font-size: 48px;
@@ -2168,6 +2171,11 @@ header {
   margin: 0;
   color: #4a4a4a;
   clear: both; }
+  @media only screen and (max-width: 767px) {
+    .single__article h1 {
+      font-size: 24px;
+      line-height: 34px;
+      margin-bottom: 20px; } }
 
 .single__article .post__info {
   display: block;
@@ -2220,6 +2228,10 @@ header {
   padding-bottom: 95px;
   border-bottom: solid 1px #eeeeee;
   margin-bottom: 75px; }
+  @media only screen and (max-width: 767px) {
+    .single__article .article__content {
+      padding-bottom: 0;
+      margin-bottom: 40px; } }
   .single__article .article__content p {
     font-size: 20px;
     font-family: Georgia, Times, "Times New Roman", serif;
@@ -2247,9 +2259,18 @@ header {
     float: left;
     width: 530px;
     margin-right: 60px; }
+    @media only screen and (max-width: 939px) {
+      .contact-page .left {
+        float: none;
+        width: 100%;
+        margin-right: 0; } }
   .contact-page .right {
     float: right;
     width: 350px; }
+    @media only screen and (max-width: 939px) {
+      .contact-page .right {
+        float: none;
+        width: 100%; } }
   .contact-page form input, .contact-page form select, .contact-page form textarea {
     border-radius: 0;
     width: 100%;
@@ -2275,6 +2296,14 @@ header {
     background: #4a4b9b;
     padding: 20px;
     border: none; }
+  .contact-page form .Iama {
+    position: relative; }
+    .contact-page form .Iama:after {
+      content: "\2023";
+      position: absolute;
+      transform: rotate(90deg);
+      top: -5px;
+      right: 25px; }
 
 .about-page .about-banner {
   background: url(../i/about.png) center no-repeat;
@@ -2384,8 +2413,9 @@ header {
   color: #4a4a4a;
   font-size: 24px;
   border-bottom: solid 1px #9b9b9b;
-  line-height: 50px;
-  transition: all 0.2s; }
+  line-height: 28px;
+  transition: all 0.2s;
+  padding: 15px 0 13px 0; }
   .search-page a.listing:hover {
     color: #4a4b9b;
     transition: all 0.2s; }
@@ -2612,6 +2642,9 @@ nav.main-menu {
 .mobile-navigation .search-form {
   border: solid 1px #4a4a4a;
   border-radius: 2px; }
+  @media only screen and (max-width: 1119px) {
+    .mobile-navigation .search-form {
+      display: flex; } }
   .mobile-navigation .search-form:after {
     content: "";
     display: block;
@@ -2622,6 +2655,9 @@ nav.main-menu {
     float: left;
     padding: 14px 0 14px 12px;
     box-sizing: border-box; }
+    @media only screen and (max-width: 1119px) {
+      .mobile-navigation .search-form button {
+        padding-right: 15px; } }
     .mobile-navigation .search-form button .ico {
       fill: #4a4a4a;
       width: 20px;
@@ -2637,6 +2673,9 @@ nav.main-menu {
     padding-left: 12px;
     background: transparent;
     box-sizing: border-box; }
+    @media only screen and (max-width: 1119px) {
+      .mobile-navigation .search-form input {
+        flex: 1; } }
 
 .home-banner {
   max-height: 560px;
@@ -2649,7 +2688,9 @@ nav.main-menu {
       height: 360px; } }
   .home-banner img {
     width: auto;
-    height: 100%; }
+    height: auto;
+    min-height: 100%;
+    min-width: 100%; }
   .home-banner .overlay {
     position: absolute;
     top: 0;
@@ -3065,7 +3106,8 @@ input[type="submit"] {
   margin-top: 100px; }
   @media only screen and (max-width: 767px) {
     .newsletter {
-      padding: 28px 0; } }
+      padding: 28px 0;
+      margin-top: 50px; } }
   .newsletter .left {
     float: left;
     margin-right: 115px; }
@@ -3407,6 +3449,9 @@ input[type="submit"] {
         margin-right: 35px;
         float: left;
         line-height: 20px; }
+        @media only screen and (max-width: 767px) {
+          .catgroup .post__group .post .date {
+            margin-bottom: 10px; } }
       .catgroup .post__group .post .country {
         font-size: 16px;
         line-height: 24px;
@@ -3465,11 +3510,23 @@ input[type="submit"] {
       .catgroup .post__group.post__group--videos .post:first-child .speaker {
         float: left;
         width: 49%; }
+        @media only screen and (max-width: 767px) {
+          .catgroup .post__group.post__group--videos .post:first-child .speaker {
+            width: 100%;
+            float: none; } }
         .catgroup .post__group.post__group--videos .post:first-child .speaker:first-child {
           margin-right: 2%; }
+          @media only screen and (max-width: 767px) {
+            .catgroup .post__group.post__group--videos .post:first-child .speaker:first-child {
+              margin-right: 0;
+              margin-bottom: 25px; } }
     .catgroup .post__group.post__group--videos .post:nth-child(n+2) {
       width: 49%;
       margin-right: 2%; }
+      @media only screen and (max-width: 767px) {
+        .catgroup .post__group.post__group--videos .post:nth-child(n+2) {
+          width: 100%;
+          margin-right: 0; } }
       .catgroup .post__group.post__group--videos .post:nth-child(n+2) .post__image {
         margin-bottom: 30px;
         height: 190px !important; }
@@ -3591,6 +3648,9 @@ input[type="submit"] {
     display: flex;
     align-items: center;
     justify-content: center; }
+    @media only screen and (max-width: 767px) {
+      .article__share .social {
+        display: block; } }
   .article__share:after {
     content: "";
     display: block;
@@ -3599,6 +3659,9 @@ input[type="submit"] {
 .article__related {
   width: 800px;
   margin: 0 auto; }
+  @media only screen and (max-width: 939px) {
+    .article__related {
+      width: 100%; } }
   .article__related h4 {
     display: block;
     text-align: center;
@@ -3606,6 +3669,9 @@ input[type="submit"] {
     font-family: AvenirLTStd-Medium;
     color: #4a4a4a;
     margin-bottom: 45px; }
+    @media only screen and (max-width: 767px) {
+      .article__related h4 {
+        text-align: left; } }
   .article__related a {
     border: solid 1px #cdcdcd;
     padding: 15px 25px;
@@ -3616,6 +3682,13 @@ input[type="submit"] {
     border-radius: 2px;
     font-family: "TruenoLight";
     text-decoration: none; }
+    @media only screen and (max-width: 767px) {
+      .article__related a {
+        width: 100%;
+        margin-right: 0;
+        float: none;
+        display: block;
+        margin-bottom: 15px; } }
     .article__related a:last-child {
       margin-right: 0; }
     .article__related a .post__image {
@@ -3661,7 +3734,11 @@ input[type="submit"] {
   margin-top: 25px; }
   .speakers img {
     float: left;
-    margin-right: 15px; }
+    margin-right: 15px;
+    max-width: 48px;
+    max-height: 48px;
+    width: auto;
+    height: auto; }
   .speakers .speaker .speaker__info {
     float: left;
     color: #4a4a4a;
@@ -3942,6 +4019,10 @@ span.badge {
   margin-right: 2%;
   padding: 36px;
   box-sizing: border-box; }
+  @media only screen and (max-width: 767px) {
+    .catgroup .post__group.post__group--employee-champions .post {
+      width: 100%;
+      margin-right: 0; } }
   .catgroup .post__group.post__group--employee-champions .post:nth-child(3n + 3) {
     margin-right: 0; }
   .catgroup .post__group.post__group--employee-champions .post .post__image {
@@ -3956,6 +4037,10 @@ span.badge {
       height: auto;
       display: block;
       margin: 0 auto; }
+      @media only screen and (max-width: 767px) {
+        .catgroup .post__group.post__group--employee-champions .post .post__image img {
+          width: auto;
+          height: 100%; } }
   .catgroup .post__group.post__group--employee-champions .post h4 {
     font-size: 24px;
     font-family: AvenirLTStd-Medium;

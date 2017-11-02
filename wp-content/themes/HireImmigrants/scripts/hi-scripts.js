@@ -54,7 +54,7 @@ $(document).ready(function(){
 	});
 
 	$('.search-form .close').click(function() {
-		$('.search-form').fadeOut();
+		$('.desktop-only .search-form').fadeOut();
 	});
 
 	$('.badges .badge').click(function() {

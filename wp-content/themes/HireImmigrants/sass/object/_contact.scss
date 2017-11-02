@@ -16,10 +16,19 @@
 		float: left;
 		width: 530px;
 		margin-right: 60px;
+		@include respond(screen-med-sm){
+			float: none;
+			width: 100%;
+			margin-right: 0;
+		}
 	}
 	.right{
 		float: right;
 		width: 350px;
+		@include respond(screen-med-sm){
+			float: none;
+			width: 100%;
+		}
 	}
 	form{
 		input, select, textarea{
@@ -50,6 +59,16 @@
 			background: $victoria;
 			padding: 20px;
 			border: none;
+		}
+		.Iama{
+			position: relative;
+			&:after{
+				content: "\2023";
+				position: absolute;
+				transform: rotate(90deg);
+				top: -5px;
+				right: 25px;
+			}
 		}
 	}
 }
