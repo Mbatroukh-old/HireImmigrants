@@ -8,6 +8,21 @@
 		border-radius: 2px;
 		line-height: 16px;
 		transition: all 0.2s;
+		// @include respond(screen-med-sm){
+		// 	margin-left: 0;
+		// 	margin-bottom: 15px;
+		// }
+		@include respond(screen-xs){
+			width: 47.5%;
+			margin-right: 5%;
+			box-sizing: border-box;
+			float: left;
+			margin-left: 0;
+			margin-bottom: 15px;
+			&:nth-child(2n+2){
+				margin-right: 0;
+			}
+		}
 		.ico{
 			fill: $white;
 			margin-right: 15px;

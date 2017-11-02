@@ -29,6 +29,7 @@
 @import "settings/colours";
 @import "settings/fonts";
 @import "settings/typography";
+@import "settings/media";
 // Tools -- Functions and mixins.
 // Generic -- Generic, high-level styling, like resets, etc.
 @import "generic/containers";
@@ -37,6 +38,11 @@
 // Object -- Objects and abstractions.
 @import "object/header";
 @import "object/article";
+@import "object/contact";
+@import "object/about";
+@import "object/fourOhFour";
+@import "object/search";
+@import "object/devices";
 @import "object/footer";
 // Components -- Your designed UI elements
 @import "component/navigation";
@@ -54,4 +60,12 @@
 @import "component/article-related";
 @import "component/speakers";
 @import "component/breadcrumbs";
+@import "component/founded-funding-sister";
+@import "component/badges";
+@import "component/search-form";
+@import "component/pagination";
 // Trumps -- Overrides and helper classes
+@import "trumps/buttons";
+@import "trumps/article-group";
+@import "trumps/flags";
+@import "trumps/single";

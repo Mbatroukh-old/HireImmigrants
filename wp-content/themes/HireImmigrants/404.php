@@ -1,14 +1,9 @@
 <?php get_header(); ?>
-<section id="content" role="main">
-<article id="post-0" class="post not-found">
-<header class="header">
-<h1 class="entry-title"><?php _e( 'Not Found', 'blankslate' ); ?></h1>
-</header>
-<section class="entry-content">
-<p><?php _e( 'Nothing found for the requested page. Try a search instead?', 'blankslate' ); ?></p>
-<?php get_search_form(); ?>
-</section>
-</article>
-</section>
-<?php get_sidebar(); ?>
+<div class="fourOhFour">
+	<div class="container">
+		<img src="<?php echo get_template_directory_uri(); ?>/i/404.png">
+		<h3>Something went wrong</h3>
+		<p>We’re sorry about that.  We hope you can eventually find what you’re looking for!</p>
+	</div>
+</div>
 <?php get_footer(); ?>

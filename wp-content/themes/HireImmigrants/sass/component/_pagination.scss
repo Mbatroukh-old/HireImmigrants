@@ -1,0 +1,27 @@
+.wp-pagenavi{
+	padding-top: 50px;
+	text-align: center;
+	span.current, a.page{
+		font-family: $truenoLight;
+		border-radius: 3px;
+		padding: 10px 15px !important;
+		box-sizing: border-box;
+		border: solid 1px $victoria !important;
+	}
+	span{
+		color: $victoria;
+	}
+	a{
+		background: $victoria;
+		color: $white;
+		transition: all 0.2s;
+		border: none !important;
+		&:hover{
+			transition: all 0.2s;
+			background: darken($victoria, 10%);
+		}
+	}
+	a.previouspostslink, a.nextpostslink{
+		border-radius: 3px;
+	}
+}

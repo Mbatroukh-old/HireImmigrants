@@ -2,9 +2,22 @@
 	background: rgba(74, 75, 155, .1);
 	padding: 50px 0;
 	margin-top: 100px;
+	@include respond(screen-xs){
+		padding: 28px 0;
+	}
 	.left{
 		float: left;
 		margin-right: 115px;
+		@include respond(screen-med){
+			width: 40%;
+			margin-right: 5%;
+		}
+		@include respond(screen-xs){
+			float: none;
+			clear: both;
+			width: 100%;
+			margin-bottom: 25px; 
+		}
 		span{
 			color: $dusty-gray;
 			font-size: 16px;
@@ -12,30 +25,59 @@
 			margin-bottom: 20px;
 			font-family: $truenoReg;
 			text-transform: uppercase;
+			@include respond(screen-xs){
+				display: block;
+				font-size: 12px;
+				margin-bottom: 15px;
+			}
 		}
 		h5{
 			font-size: 28px;
 			color: $tundora;
 			line-height: 40px;
 			font-family: $truenoReg;
+			@include respond(screen-xs){
+				font-size: 	18px;
+				line-height: 20px;
+				br{
+					display: none;
+				}
+			}
 		}
 	}
 	.right{
 		float: left;
+		@include respond(screen-med){
+			width: 55%;
+		}
+		@include respond(screen-xs){
+			float: none;
+			clear: both;
+			width: 100%;
+		}
 		form{
-			input[type="text"], button{
+			input[type="text"], input[type="email"], button, input[type="submit"]{
 				display: block;
 				border-radius: 2px;
 				width: 300px;
 				box-sizing: border-box;
+				@include respond(screen-med){
+					width: 100%;
+				}
+				@include respond(screen-xs){
+					width: 100%;	
+				}
 			}
-			input[type="text"]{
+			label, hr, sub{
+				display: none;
+			}
+			input[type="text"], input[type="email"]{
 				border: solid 1px $tundora;
 				font-family: $truenoLight;
 				margin-bottom: 15px;
 				padding: 15px 20px;
 			}
-			button{
+			button, input[type="submit"]{
 				position: relative;
 				background: $victoria;
 				border: none;

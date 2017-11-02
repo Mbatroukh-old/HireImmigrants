@@ -4,7 +4,8 @@
 		display: block;
 		margin-bottom: 38px;
 		img{
-			width: 100%
+			width: 100%;
+			height: auto;
 		}
 	}
 	.date{
@@ -13,14 +14,17 @@
 		font-family: $truenoLight;
 		display: block;
 		margin-bottom: 12px;
+		float: left;
+		margin-right: 25px;
 	}
 	h1{
 		font-size: 48px;
 		line-height: 64px;
 		font-family: $truenoLight;
 		display: block;
-		margin-bottom: 55px;
+		margin: 0;
 		color: $tundora;
+		clear: both;
 	}
 	.post__info{
 		display: block;
@@ -60,6 +64,20 @@
 			display: block;
 			clear: both;
 		}
+	}
+	.speakers{
+		margin-bottom: 25px;
+	}
+	.organization{
+		border: solid 1px #eeeeee;
+	    padding: 20px 25px;
+	    margin-top: 25px;
+	    font-family: "TruenoRegular";
+	    display: inline-block;
+	    border-radius: 2px;
+	    font-size: 16px;
+	    color: #4a4a4a;
+	    margin-bottom: 25px;
 	}
 	.article__content{
 		display: block;

@@ -1,0 +1,107 @@
+.badges{
+	padding-top: 50px;
+	.badge{
+		cursor: pointer;
+	}
+	.all-badge{
+		&:hover{
+			background: darken($white, 10%);
+			transition: all 0.2s;
+		}
+	}
+	.hire-badge{
+		&:hover{
+			background: darken($turquoise-blue, 10%);
+			transition: all 0.2s;
+		}
+	}
+
+	.diversity-badge{
+		&:hover{
+			background: darken($medium-purple, 10%);
+		}
+	}
+
+	.ideas-badge{
+		&:hover{
+			background: darken($terracotta, 10%);
+		}
+	}
+
+	.innovation-badge{
+		&:hover{
+			background: darken($deep-blush, 10%);
+		}
+	}
+
+	.immigration-badge{
+		&:hover{
+			background: darken($cornflower-blue, 10%);
+		}
+	}
+
+	.policy-badge{
+		&:hover{
+			background: darken($sulu, 10%);
+		}
+	}
+
+	.research-badge{
+		&:hover{
+			background: darken($buttercup, 10%);
+		}
+	}
+}
+
+span.badge{
+	display: block;
+	float: left;
+	margin-right: 15px;
+	border-radius: 3px;
+	padding: 10px 15px;
+	font-family: $truenoLight;
+	text-decoration: none;
+	color: $white;
+	transition: all 0.2s;
+	font-size: 16px;
+}
+
+.date{
+	& + .badge{
+		font-size: 14px;
+		padding: 4px 10px;
+	}
+}
+
+.all-badge{
+	background: $white;
+	color: $dove-gray !important;
+}
+
+.hire-badge{
+	background: $turquoise-blue;
+}
+
+.diversity-badge{
+	background: $medium-purple;
+}
+
+.ideas-badge{
+	background: $terracotta;
+}
+
+.innovation-badge{
+	background: $deep-blush;
+}
+
+.immigration-badge{
+	background: $cornflower-blue;
+}
+
+.policy-badge{
+	background: $sulu;
+}
+
+.research-badge{
+	background: $buttercup;
+}

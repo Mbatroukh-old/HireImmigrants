@@ -1,0 +1,13 @@
+.not-desktop{
+	@include respond(screen-xlarge){
+		display: none;
+	}
+	@include respond(screen-less-than-xlarge){
+		display: block;
+	}
+}
+.desktop-only{
+	@include respond(screen-less-than-xlarge){
+		display: none;
+	}	
+}

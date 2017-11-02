@@ -1,0 +1,24 @@
+.single__article--stories{
+	.post__info{
+		span{
+			float: left;
+			&.organization{
+				margin: 25px 25px 0 0;
+			}
+			&.country{
+				width: auto;
+				padding: 20px;
+				margin-top: 20px;
+			}
+		}
+	}
+}
+
+.single__article--reports{
+	.post__info{
+		.author{
+			margin: 25px 50px 25px 0;
+			padding: 10px 0;
+		}
+	}
+}

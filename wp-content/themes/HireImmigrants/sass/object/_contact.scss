@@ -1,0 +1,55 @@
+.contact-page{
+	padding-top: 70px;
+	color: $tundora;
+
+	h3{
+		font-size: 40px;
+	}
+	p{
+		font-size: 20px;
+		font-family: $georgia;
+		line-height: 34px;
+		display: block;
+		margin-bottom: 25px;
+	}
+	.left{
+		float: left;
+		width: 530px;
+		margin-right: 60px;
+	}
+	.right{
+		float: right;
+		width: 350px;
+	}
+	form{
+		input, select, textarea{
+			border-radius: 0;
+			width: 100%;
+			box-sizing: border-box;
+			font-size: 16px;
+			color: $dusty-gray;
+			font-family: $truenoLight;
+			padding: 20px 15px;
+			border: solid 1px $tundora;
+			background: $white;
+		}
+		select{
+			-webkit-appearance: none;
+			-moz-appearance: none;
+			-ms-appearance: none;
+			-o-appearance: none;
+			appearance: none;
+			color: $tundora;
+		}
+		textarea{
+			resize: vertical;
+		}
+		input[type="submit"]{
+			color: $white;
+			text-align: left;
+			background: $victoria;
+			padding: 20px;
+			border: none;
+		}
+	}
+}

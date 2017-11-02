@@ -1,4 +1,4 @@
-module.exports = function( Release, files, complete ) {
+module.exports = function( Release, complete ) {
 
 	var
 		fs = require( "fs" ),
@@ -10,7 +10,7 @@ module.exports = function( Release, files, complete ) {
 			.replace( /jquery(\.git|$)/, "jquery-dist$1" ),
 
 		// These files are included with the distribution
-		extras = [
+		files = [
 			"src",
 			"LICENSE.txt",
 			"AUTHORS.txt",
@@ -57,14 +57,12 @@ module.exports = function( Release, files, complete ) {
 		// Copy dist files
 		var distFolder = Release.dir.dist + "/dist",
 			externalFolder = Release.dir.dist + "/external",
-			rmIgnore = files
-				.concat( [
-					"README.md",
-					"node_modules"
-				] )
-				.map( function( file ) {
-					return Release.dir.dist + "/" + file;
-				} );
+			rmIgnore = [
+				"README.md",
+				"node_modules"
+			].map( function( file ) {
+				return Release.dir.dist + "/" + file;
+			} );
 
 		shell.config.globOptions = {
 			ignore: rmIgnore
@@ -74,7 +72,11 @@ module.exports = function( Release, files, complete ) {
 		shell.rm( "-rf", Release.dir.dist + "/**/*" );
 
 		shell.mkdir( "-p", distFolder );
-		files.forEach( function( file ) {
+		[
+			"dist/jquery.js",
+			"dist/jquery.min.js",
+			"dist/jquery.min.map"
+		].forEach( function( file ) {
 			shell.cp( "-f", Release.dir.repo + "/" + file, distFolder );
 		} );
 
@@ -83,29 +85,25 @@ module.exports = function( Release, files, complete ) {
 		shell.cp( "-rf", Release.dir.repo + "/external/sizzle", externalFolder );
 
 		// Copy other files
-		extras.forEach( function( file ) {
+		files.forEach( function( file ) {
 			shell.cp( "-rf", Release.dir.repo + "/" + file, Release.dir.dist );
 		} );
-
-		// Remove the wrapper from the dist repo
-		shell.rm( "-f", Release.dir.dist + "/src/wrapper.js" );
 
 		// Write generated bower file
 		fs.writeFileSync( Release.dir.dist + "/bower.json", generateBower() );
 
 		console.log( "Adding files to dist..." );
-
-		Release.exec( "git add -A", "Error adding files." );
+		Release.exec( "git add .", "Error adding files." );
 		Release.exec(
-			"git commit -m \"Release " + Release.newVersion + "\"",
-			"Error committing files."
+			"git commit -m 'Release " + Release.newVersion + "'",
+			"Error commiting files."
 		);
 		console.log();
 
 		console.log( "Tagging release on dist..." );
 		Release.exec( "git tag " + Release.newVersion,
 			"Error tagging " + Release.newVersion + " on dist repo." );
-		Release.tagTime = Release.exec( "git log -1 --format=\"%ad\"",
+		Release.tagTime = Release.exec( "git log -1 --format='%ad'",
 			"Error getting tag timestamp." ).trim();
 	}
 

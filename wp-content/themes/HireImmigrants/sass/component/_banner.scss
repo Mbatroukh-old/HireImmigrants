@@ -3,8 +3,13 @@
 	height: 560px;
 	position: relative;
 	overflow: hidden;
+	@include respond(screen-less-than-xlarge){
+		max-height: 360px;
+		height: 360px;
+	}
 	img{
-		width: 100%;
+		width: auto;
+		height: 100%;
 	}
 	.overlay{
 		position: absolute;
@@ -18,24 +23,38 @@
 		background: linear-gradient(to bottom, rgba(0,0,0,0.1) 0%,rgba(0,0,0,0.8) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
 		filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#1a000000', endColorstr='#cc000000',GradientType=0 ); /* IE6-9 */
 		padding-top: 132px;
+		@include respond(screen-less-than-xlarge){
+			padding-top: 60px;
+		}
 		span{
 			font-size: 14px;
 			text-transform: uppercase;
 			padding: 10px 14px;
 			color: $white;
-			background: $buttercup;
+			// background: $buttercup;
 			border-radius: 3px;
-			// margin-bottom: 10px;
+			margin-bottom: 10px;
 			display: inline-block;
 			font-family: $truenoLight;
+			@include respond(screen-less-than-xlarge){
+				font-size: 12px;
+				padding: 8px 15px;
+			}
 		}
 		h1{
 			width: 85%;
 			// font-size: 60px;
+			clear: both;
 			font-size: 54px;
 			line-height: 74px;
 			color: $white;
 			margin: 0 0 30px 0;
+			@include respond(screen-less-than-xlarge){
+				font-size: 26px;
+				line-height: 34px;
+				width: 100%;
+				margin: 0 0 15px 0;
+			}
 		}
 	}
 }

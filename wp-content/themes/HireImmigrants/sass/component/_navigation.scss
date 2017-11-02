@@ -1,22 +1,124 @@
 nav.main-menu{
 	float: left;
+	@include respond(screen-less-than-xlarge){
+		display: none;
+	}
 	ul{
 		li{
 			margin-left: 28px;
 			line-height: 55px;
 			display: inline-block;
+			@include respond(screen-less-than-xlarge){
+				display: block;
+				margin-left: 0;
+				float: left;
+				clear: both;
+			}
 			a{
 				color: $gray;
 				font-size: 16px;
 				text-decoration: none;
 				transition: all 0.2s;
+				@include respond(screen-less-than-xlarge){
+					font-family: $truenoLight;
+					font-size: 28px;
+					color: $tundora;
+					padding: 18px 0;
+				}
 			}
 			&.current-menu-item, &:hover{
 				a{
 					color: $victoria;
 					transition: all 0.2s;
+					@include respond(screen-less-than-xlarge){
+
+					}
 				}
 			}
+		}
+	}
+}
+
+.mobile-navigation{
+	@include respond(screen-less-than-xlarge){
+		float: none;
+		position: fixed;
+		width: 100%;
+		height: 100%;
+		background: $white;
+		top: 0;
+		left: 100%;
+		z-index: 999;
+		box-sizing: border-box;
+		padding: 0 4%;
+		transition: all 0.3s ease-out;
+	}
+	&.active{
+		@include respond(screen-less-than-xlarge){
+			left: 0;
+			transition: all 0.3s ease-out;
+		}
+	}
+	nav.mobile-main-menu{
+		ul{
+			li{
+				@include respond(screen-less-than-xlarge){
+					display: block;
+					line-height: 55px;
+					float: left;
+					clear: both;
+				}
+				a{
+					@include respond(screen-less-than-xlarge){
+						font-family: $truenoLight;
+						text-decoration: none;
+						font-size: 28px;
+						color: $tundora;
+						padding: 18px 0;
+					}
+				}
+				&.current-menu-item, &:hover{
+					a{
+						@include respond(screen-less-than-xlarge){
+							color: $victoria;
+							transition: all 0.2s;
+						}
+					}
+				}
+			}
+		}
+	}
+	.search-form{
+		border: solid 1px $tundora;
+		border-radius: 2px;
+		&:after{
+			content: "";
+			display: block;
+			clear: both;
+		}
+		button{
+			border: none;
+			background: transparent;
+			float: left;
+			padding: 14px 0 14px 12px;
+			box-sizing: border-box;
+			.ico{
+				fill: $tundora;
+				width: 20px;
+				height: 20px;
+			}
+		}
+		input{
+			font-size: 18px;
+			color: $gray;
+			line-height: 50px;
+			font-family: $truenoLight;
+			border: none;
+			display: block;
+			float: left;
+			padding-left: 12px;
+			background: transparent;
+			box-sizing: border-box;
 		}
 	}
 }

@@ -1,20 +1,35 @@
-ul.breadcrumbs{
+.breadcrumbs{
 	background: rgba(74, 75, 155, .1);
 	padding: 25px 0;
 	// margin-bottom: 50px;
 	// display: block;
-	li{
+	@include respond(screen-xs){
+		display: none;
+	}
+	li, span{
 		font-size: 16px;
-		color: $victoria;
 		float: left;
+		font-family: $truenoLight;
 		a{
-			color: $dusty-gray;
 			text-decoration: none;
+			span{
+				color: $dusty-gray;
+				transition: all 0.3s;
+				&:hover{
+					transition: all 0.3s;
+					color: $victoria;
+					text-decoration: underline;
+				}
+			}
 			&:after{
 				content: "/";
 				float: right;
 				margin: 0 10px;
+				color: $dusty-gray;
 			}
+		}
+		span{
+			color: $victoria;
 		}
 	}
 	&:after{

@@ -1,0 +1,53 @@
+.desktop-only form.search-form{
+	position: absolute;
+	top: 0;
+	right: 0;
+	display: none;
+	input{
+		border: none;
+		width: 650px;
+		height: 55px;
+		box-sizing: border-box;
+		line-height: 55px;
+		font-size: 25px;
+		font-family: $truenoLight;
+		color: $tundora;
+		outline: none;
+	}
+	button{
+		border: none;
+		background: transparent;
+		position: absolute;
+		right: 49px;
+		top: 15px;
+		.mag-glass{
+			width: 21px;
+			height: 21px;
+			fill: $mine-shaft;
+			&:hover{
+				fill: $victoria;
+				transition: all 0.2s;
+			}
+		}
+	}
+	.close{
+		width: 15px !important;
+		height: 15px;
+		position: absolute;
+		top: 15px;
+		right: 19px;
+		fill: $mine-shaft;
+		transition: all 0.2s;
+		padding: 5px;
+		&:hover{
+			fill: $victoria;
+			transition: all 0.2s;
+		}
+	}
+}
+
+.mobile-navigation{
+	form.search-form{
+		clear: both;		
+	}
+}

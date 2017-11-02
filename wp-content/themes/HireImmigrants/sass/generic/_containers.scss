@@ -2,6 +2,25 @@
 	width: 940px;
 	display: block;
 	margin: 0 auto;
+	
+	@include respond(screen-less-than-xlarge){
+		width: 92%;
+	}
+
+	&:after{
+		content: "";
+		display: table;
+		clear: both;
+	}
+}
+.container-w{
+	width: 1120px;
+	display: block;
+	margin: 0 auto;
+
+	@include respond(screen-less-than-xlarge){
+		width: 92%;
+	}
 
 	&:after{
 		content: "";

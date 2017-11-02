@@ -2,19 +2,38 @@
 	margin-top: -35px;
 	position: relative;
 	margin-bottom: 145px;
+	@include respond(screen-less-than-xlarge){
+		margin-bottom: 50px;
+	}
 	.spotlight-wrap{
 		display: flex;
 		overflow: hidden;
+		@include respond(screen-less-than-xlarge){
+			display: block;
+		}
 		.spotlight{
 			// float: left;
-			flex: 1;
-			width: 47.5%;
-			margin-right: 5%;
+			// flex: 1;
+			// width: 47.5%;
+			// margin-right: 5%;
+			float: left;
 			border: solid 1px $alto;
 			border-radius: 3px;
 			padding: 35px;
 			background: $white;
 			box-sizing: border-box;
+			@include respond(screen-less-than-xlarge){
+				float: none;
+				clear: both;
+				margin-bottom: 15px;
+				padding: 30px;
+
+				&:after{
+					content: "";
+					display: block;
+					clear: both;
+				}
+			}
 			span{
 				font-size: 16px;
 				color: $dusty-gray;
@@ -23,6 +42,10 @@
 				font-family: $truenoSemiBold;
 				letter-spacing: 3px;
 				text-transform: uppercase;
+				@include respond(screen-less-than-xlarge){
+					font-size: 12px;
+					margin-bottom: 10px;
+				}
 			}
 			h6{
 				// font-size: 24px;
@@ -31,6 +54,11 @@
 				line-height: 32px;
 				display: block;
 				margin-bottom: 10px;
+				@include respond(screen-less-than-xlarge){
+					font-size: 18px;
+					line-height: 28px;
+					margin-bottom: 15px;
+				}
 			}
 			p{
 
@@ -43,18 +71,55 @@
 				font-size: 16px;
 				input{
 					display: block;
-					width: 300px;
+					float: left;
 				}
-				input[type="text"]{
+				input[type="text"], input[type="email"]{
+					font-family: $truenoLight;
 					border: solid 1px $dove-gray;
 					border-radius: 3px;
-					margin-bottom: 15px;
+					// margin-bottom: 15px;
 					padding: 15px 20px;
 					box-sizing: border-box;
+					width: 300px;
+					@include respond(screen-less-than-xlarge){
+						margin-bottom: 25px;
+						margin-right: 25px;
+					}
+				}
+				label, hr, sub{
+					display: none;
+				}
+				button, input[type="submit"]{
+					width: 250px;
+					margin-left: 24px;
+					text-align: left;
+					border: none;
+					@include respond(screen-less-than-xlarge){
+						margin-bottom: 30px;
+						margin-left: 0;
+					}
+					
+					.ico{
+						width: 20px;
+						height: 16px;
+						float: right;
+					}
+				}
+			}
+			&:first-child{
+				width: 40%;
+				margin-right: 2%;
+				@include respond(screen-less-than-xlarge){
+					width: 100%;
+					margin-right: 0;
 				}
 			}
 			&:last-child{
-				margin-right: 0;
+				width: 58%;
+				@include respond(screen-less-than-xlarge){
+					width: 100%;
+					padding-bottom: 0;
+				}
 			}
 		}
 	}

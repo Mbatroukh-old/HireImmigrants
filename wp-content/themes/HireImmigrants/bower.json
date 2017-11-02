@@ -2,7 +2,7 @@
     "name": "HireImmigrants",
     "version": "0.0.1",
     "dependencies": {                
-        "jQuery": "3.1.1",
+        "jQuery": "2.2.4",
         "normalize.css": "5.0.0",
         "svg4everybody": "2.1.8"
     },

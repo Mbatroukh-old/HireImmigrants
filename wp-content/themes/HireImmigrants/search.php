@@ -1,24 +1,26 @@
 <?php get_header(); ?>
-<section id="content" role="main">
-<?php if ( have_posts() ) : ?>
-<header class="header">
-<h1 class="entry-title"><?php printf( __( 'Search Results for: %s', 'blankslate' ), get_search_query() ); ?></h1>
-</header>
-<?php while ( have_posts() ) : the_post(); ?>
-<?php get_template_part( 'entry' ); ?>
-<?php endwhile; ?>
-<?php get_template_part( 'nav', 'below' ); ?>
-<?php else : ?>
-<article id="post-0" class="post no-results not-found">
-<header class="header">
-<h2 class="entry-title"><?php _e( 'Nothing Found', 'blankslate' ); ?></h2>
-</header>
-<section class="entry-content">
-<p><?php _e( 'Sorry, nothing matched your search. Please try again.', 'blankslate' ); ?></p>
-<?php get_search_form(); ?>
-</section>
-</article>
-<?php endif; ?>
-</section>
-<?php get_sidebar(); ?>
+<div class="search-page">
+	<div class="container">
+		<?php if ( have_posts() ) : ?>
+			<h1 class="searched-term"><?php printf( __( 'Search Results for: %s', 'blankslate' ), get_search_query() ); ?></h1>
+			<?php while ( have_posts() ) : the_post(); ?>
+				<a class="listing" href="<?php the_permalink(); ?>">
+					<h3><?php the_title(); ?></h3>
+				</a>
+			<?php endwhile; ?>
+			<?php wp_pagenavi(); ?>
+		<?php else : ?>
+			<h1 class="no-results-searched-term"><?php _e( 'Nothing Found', 'blankslate' ); ?></h1>
+			<span class="apologies"><?php _e( 'Sorry, nothing matched your search. Please try again.', 'blankslate' ); ?></span>
+			<form class="no-results-search-form" method="get" action="/">
+				<input type="text" id="s" name="s" placeholder="Search...">
+				<button type="submit">
+					<svg class="ico mag-glass">
+						<use xlink:href="#mag-glass"/>
+					</svg>
+				</button>
+			</form>
+		<?php endif; ?>	
+	</div>
+</div>
 <?php get_footer(); ?>

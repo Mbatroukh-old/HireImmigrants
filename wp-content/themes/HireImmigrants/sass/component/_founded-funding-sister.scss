@@ -1,0 +1,91 @@
+.founding-funded-sister{
+	padding-top: 40px;
+	@include respond(screen-less-than-xlarge){
+		padding-top: 50px;
+	}
+	.tab-row{
+		display: flex;
+		justify-content: center;
+		margin-bottom: 65px;
+		@include respond(screen-xs){
+			display: block;
+			margin-bottom: 35px;
+			&:after{
+				content: "";
+				display: block;
+				clear: both;
+			}
+		}
+		button{
+			margin-right: 36px;
+			font-size: 18px;
+			font-family: $truenoReg;
+			color: $gray;
+			padding: 18px 14px;
+			border-radius: 3px;
+			border: solid 1px $gray;
+			transition: all 0.3s;
+			cursor: pointer;
+			background: $white;
+			@include respond(screen-xs){
+				width: 47.5%;
+				margin-right: 5%;
+				display: block;
+				float: left;
+				margin-bottom: 12px;
+				&:nth-child(2n+2){
+					margin-right: 0;
+				}
+			}
+			&:last-child{
+				margin-left: 0;
+			}
+			&:hover{
+				transition: all 0.3s;
+				background: darken($whisper, 10%);
+				color: $victoria;
+				border: solid 1px $victoria;
+			}
+			&.active{
+				color: $victoria;
+				border: solid 1px $victoria;
+				background: $whisper;
+			}
+		}
+	}
+	.container-w{
+		position: relative;
+	}
+	.logo-row{
+		opacity: 0;
+		transition: 0.3s all ease-in;
+		display: flex;
+		justify-content: space-around;
+		align-content: center;
+		position: absolute;
+		width: 100%;
+		top: 125px;
+		left: 0;
+		@include respond(screen-xs){
+			flex-wrap: wrap;
+			position: static;
+			display: none;
+			justify-content: space-around;
+		}
+		&.visible{
+			opacity: 1;
+			transition: 0.3s all ease-in;
+			@include respond(screen-xs){
+				display: flex;
+			}
+		}
+		img{
+			height: 55px;
+			@include respond(screen-xs){
+				margin-bottom: 25px;
+				// height: auto;
+				// width: 47.5%;
+			}
+		}
+	}
+}

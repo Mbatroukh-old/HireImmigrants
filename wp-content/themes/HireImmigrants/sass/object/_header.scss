@@ -1,7 +1,10 @@
 header{
 	padding: 10px 0;
 	font-family: "TruenoSemiBold";
-	
+	box-shadow: 0px 3px 15px 1px rgba(0,0,0,0.2);
+	@include respond(screen-less-than-xlarge){
+		padding: 12px 0;
+	}
 	.left{
 		float: left;
 
@@ -11,12 +14,20 @@ header{
 			line-height: 55px;
 			font-size: 20px;
 			font-family: $truenoReg;
+			@include respond(screen-less-than-xlarge){
+				font-size: 16px;
+				line-height: 36px;
+			}
 
 			.ico{
 				height: 55px;
 				width: 55px;
 				margin-right: 20px;
 				float: left;
+				@include respond(screen-less-than-xlarge){
+					height: 36px;
+					width: 36px;
+				}
 			}
 		}
 	}
@@ -26,19 +37,42 @@ header{
 			float: right;
 			border-right: solid 1px $wild-sand;
 			border-left: solid 1px $wild-sand;
-			padding: 17px 25px;
 			margin-left: 33px;
 			cursor: pointer;
-			.ico{
+			position: relative;
+			
+			.search-trigger{
 				width: 21px;
 				height: 21px;
 				fill: $mine-shaft;
 				transition: all 0.2s;
+				padding: 17px 25px;
 			}
 			&:hover{
-				.ico{
+				.search-trigger{
 					fill: $victoria;
 					transition: all 0.2s;
+				}
+			}
+		}
+		.mobile-menu-trigger{
+			@include respond(screen-less-than-xlarge){
+				color: $victoria;
+				font-size: 16px;
+				font-family: $truenoLight;
+				line-height: 36px;
+			}
+		}
+		.mobile-navigation{
+			.mobile-menu-close{
+				@include respond(screen-less-than-xlarge){
+					color: $buttercup;
+					font-size: 16px;
+					font-family: $truenoLight;
+					line-height: 36px;
+					position: absolute;
+					top: 12px;
+					right: 4%;
 				}
 			}
 		}

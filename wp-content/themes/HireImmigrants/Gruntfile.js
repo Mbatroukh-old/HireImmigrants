@@ -41,7 +41,7 @@ module.exports = function(grunt) {
         // Task - Compile SASS
         sass: {
             options: {
-                sourceMap: false
+                sourceMap: true
             },
             dev: {
                 files: {
@@ -86,6 +86,7 @@ module.exports = function(grunt) {
             },
             vendor: {
                 src: [
+                    'bower_components/jQuery/dist/jquery.min.js',
                     'bower_components/svg4everybody/dist/svg4everybody.min.js'
                 ],
                 dest: 'js/vendor.js',
@@ -93,7 +94,8 @@ module.exports = function(grunt) {
             },
             vendorScss: {
                 src: [
-                    'bower_components/normalize.css/normalize.css'
+                    'bower_components/normalize.css/normalize.css',
+                    'bower_components/flag-icon-css/css/flag-icon.min.css'
                 ],
                 dest: 'sass/base/_vendor.scss',
                 nonull: true

@@ -1,9 +1,74 @@
+@font-face{
+	font-family: 'TruenoBlack';
+        src: url('../fonts/TruenoBlack.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face{
+	font-family: 'TruenoBold';
+        src: url('../fonts/TruenoBold.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face{
+	font-family: 'TruenoExtraBold';
+        src: url('../fonts/TruenoExtraBold.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face{
+	font-family: 'TruenoLight';
+        src: url('../fonts/TruenoLight.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face{
+	font-family: 'TruenoRegular';
+        src: url('../fonts/TruenoRegular.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face{
+	font-family: 'TruenoSemiBold';
+        src: url('../fonts/TruenoSemiBold.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face{
+	font-family: 'TruenoUltraBlack';
+        src: url('../fonts/TruenoUltraBlack.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face{
+	font-family: 'TruenoUltraLight';
+        src: url('../fonts/TruenoUltraLight.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+}
+
 $georgia: Georgia, Times, "Times New Roman", serif;
-$truenoBlack: 'TruenoBlack';
-$truenoBold: 'TruenoBold';
+// $truenoBlack: 'TruenoBlack';
+$truenoBlack: AvenirLTStd-Black;
+// $truenoBold: 'TruenoBold';
+$truenoBold: AvenirLTStd-Heavy;
 $truenoExtraBold: 'TruenoExtraBold';
 $truenoLight: 'TruenoLight';
-$truenoReg: 'TruenoRegular';
-$truenoSemiBold: 'TruenoSemiBold';
-$truenoUltraBlack: 'TruenoUltraBlack';
+// $truenoReg: 'TruenoRegular';
+$truenoReg: AvenirLTStd-Medium;
+// $truenoSemiBold: 'TruenoSemiBold';
+$truenoSemiBold: AvenirLTStd-Heavy;
+// $truenoUltraBlack: 'TruenoUltraBlack';
+$truenoUltraBlack: AvenirLTStd-Black;
 $truenoUltraLight: 'TruenoUltraLight';
+
+// AvenirLTStd-Heavy
+// AvenirLTStd-Roman
+// AvenirLTStd-Black

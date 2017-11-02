@@ -1,10 +1,18 @@
 .explore-wrap{
 	.explore-highlights{
+		padding-bottom: 80px;
+		border-bottom: solid 1px $concrete;
+		@include respond(screen-less-than-xlarge){
+			padding-bottom: 35px;
+		}
 		.row{
 			.block{
 				border-radius: 3px;
 				padding: 35px;
 				box-sizing: border-box;
+				@include respond(screen-less-than-xlarge){
+					margin-bottom: 15px;
+				}
 				.btn{
 					color: $white;
 					display: block;
@@ -18,6 +26,11 @@
 					margin-bottom: 15px;
 					font-family: $truenoReg;
 					color: $tundora;
+					@include respond(screen-less-than-xlarge){
+						font-size: 18px;
+						line-height: 22px;
+						margin-bottom: 12px;
+					}
 				}
 				p{
 					display: block;
@@ -26,6 +39,30 @@
 					font-size: 20px;
 					color: $tundora;
 					line-height: 34px;
+					@include respond(screen-less-than-xlarge){
+						font-size: 16px;
+						line-height: 26px;
+						margin-bottom: 20px;
+					}
+				}
+				.powered-by{
+					clear: both;
+					font-family: $truenoReg;
+					font-size: 16px;
+					color: $dusty-gray;
+					display: inline-block;
+					float: left;
+					margin-top: 15px;
+					@include respond(screen-less-than-xlarge){
+						margin-top: 0;
+						margin-bottom: 20px;
+					}
+					
+					img{
+						display: inline-block;
+						margin-left: 10px;
+						margin-bottom: -4px;
+					}
 				}
 				&:after{
 					content: "";
@@ -36,13 +73,23 @@
 			&:first-child{
 				display: flex;
 				margin-bottom: 45px;
+				@include respond(screen-less-than-xlarge){
+					display: block;
+					margin-bottom: 0;
+				}
 				.block{
 					flex: 1;
 					width: 47.5%;
+					@include respond(screen-less-than-xlarge){
+						width: 100%;
+					}
 					&:first-child{
 						margin-right: 5%;
 						border: solid 1px $wild-blue-yonder;
 						background: $whisper;
+						@include respond(screen-less-than-xlarge){
+							margin-right: 0;
+						}
 						.btn{
 							background: $victoria;
 							&:hover{
@@ -72,10 +119,17 @@
 					.block__group{
 						width: 65%;
 						float: left;
+						@include respond(screen-less-than-xlarge){
+							width: 100%;
+						}
 					}
 					.btn{
 						background: $buttercup;
 						float: right;
+						@include respond(screen-less-than-xlarge){
+							float: left;
+							clear: both;
+						}
 						&:hover{
 							transition: all 0.2s;
 							background: darken($buttercup, 10%);

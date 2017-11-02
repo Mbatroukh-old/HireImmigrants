@@ -2,8 +2,10 @@
 <html <?php language_attributes(); ?>>
 <head>
 	<meta charset="UTF-8">
-	<title><?php bloginfo('name'); wp_title('-') ?></title>
-	<link rel="stylesheet" media="screen" href="https://fontlibrary.org/face/trueno" type="text/css"/>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="theme-color" content="#4a4b9b">
+	<link rel="icon" type="image/png" href="<?php echo get_template_directory_uri(); ?>/i/favicon.png" />
+	<title><?php wp_title('-') ?></title>
 	<link rel="stylesheet" type="text/css" href="<?php echo get_stylesheet_uri(); ?>" />
 	<link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/css/hire-immigrants.css">
 	<?php wp_head(); ?>
@@ -26,53 +28,42 @@
 				'container' => 'nav',
 				'container_class' => 'main-menu'
 			) ); ?>
-			</nav>
-			<a class="search">
-				<svg class="ico">
+			<a class="search desktop-only">
+				<form class="search-form" method="get" action="/">
+					<input type="text" id="s" name="s" placeholder="Search...">
+					<button type="submit">
+						<svg class="ico mag-glass">
+							<use xlink:href="#mag-glass"/>
+						</svg>
+					</button>
+					<svg class="ico close">
+						<use xlink:href="#x"/>
+					</svg>
+				</form>
+				<svg class="ico search-trigger">
 					<use xlink:href="#mag-glass"/>
 				</svg>
 			</a>
+			<div class="not-desktop mobile-menu-trigger">
+				<span>Menu</span>
+			</div>
+			<div class="not-desktop mobile-navigation">
+				<?php wp_nav_menu( array( 
+					'menu' => 'Main Navigation',
+					'container' => 'nav',
+					'container_class' => 'mobile-main-menu'
+				) ); ?>
+				<form class="search-form" method="get" action="/">
+					<button type="submit">
+						<svg class="ico mag-glass">
+							<use xlink:href="#mag-glass"/>
+						</svg>
+					</button>
+					<input type="text" id="s" name="s" placeholder="Search">
+				</form>
+				</a>
+				<span class="mobile-menu-close">Close</span>
+			</div>
 		</div>
-	</div>
-	<div class="container">
-		<!-- <svg class="ico">
-			<use xlink:href="#announcements"/>
-		</svg>
-		<svg class="ico">
-			<use xlink:href="#arrow"/>
-		</svg>
-		<svg class="ico">
-			<use xlink:href="#employer-reports"/>
-		</svg>
-		<svg class="ico">
-			<use xlink:href="#logo-c"/>
-		</svg>
-		<svg class="ico">
-			<use xlink:href="#logo-w"/>
-		</svg>
-		<svg class="ico">
-			<use xlink:href="#mag-glass"/>
-		</svg>
-		<svg class="ico">
-			<use xlink:href="#news"/>
-		</svg>
-		<svg class="ico">
-			<use xlink:href="#ontario"/>
-		</svg>
-		<svg class="ico">
-			<use xlink:href="#policy"/>
-		</svg>
-		<svg class="ico">
-			<use xlink:href="#rbc"/>
-		</svg>
-		<svg class="ico">
-			<use xlink:href="#ryerson"/>
-		</svg>
-		<svg class="ico">
-			<use xlink:href="#stories"/>
-		</svg>
-		<svg class="ico">
-			<use xlink:href="#webinars"/>
-		</svg> -->
 	</div>
 </header>

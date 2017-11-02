@@ -1,28 +1,35 @@
 <?php
 /* Template Name: Read Page */
 get_header(); ?>
+<ul class="breadcrumbs">
+	<div class="container">
+		<?php if(function_exists('bcn_display')){
+		    bcn_display();
+		}?>
+	</div>
+</ul>
 <div class="subcats">
 	<div class="container">
 		<div class="subcats__wrap">
-			<a href="#" class="news">
+			<a href="/read/news" class="news">
 				<svg class="ico">
 					<use xlink:href="#news"/>
 				</svg>
 				News
 			</a>
-			<a href="#" class="think">
+			<a href="/read/think" class="think">
 				<svg class="ico">
 					<use xlink:href="#think"/>
 				</svg>
 				Think
 			</a>
-			<a href="#" class="qna">
+			<a href="/read/qa" class="qna">
 				<svg class="ico">
 					<use xlink:href="#qna"/>
 				</svg>
 				Q&amp;A
 			</a>
-			<a href="#"  class="announcements">
+			<a href="/read/announcements"  class="announcements">
 				<svg class="ico">
 					<use xlink:href="#announcements"/>
 				</svg>
@@ -39,34 +46,49 @@ get_header(); ?>
 			<span class="catgroup__subtitle">In the news</span>
 		</div>
 		<div class="post__group">
-			<div class="post">
-				<div class="post__image" style="background-image: url('<?php echo get_template_directory_uri(); ?>/i/filler-5.png')"></div>
-				<span class="date">April 6, 2017</span>
-				<span class="country"><img src="<?php echo get_template_directory_uri(); ?>/i/can.png" alt="">Canada</span>
-				<h4>10 simple tips why diversity is good for business</h4>
-				<p>We cannot concieve of a thought divorced from brainwaves. a statments which remains a mere</p>
-			</div>
-			<div class="post">
-				<div class="post__image" style="background-image: url('<?php echo get_template_directory_uri(); ?>/i/filler-5.png')"></div>
-				<span class="date">April 6, 2017</span>
-				<span class="country"><img src="<?php echo get_template_directory_uri(); ?>/i/can.png" alt="">Canada</span>
-				<h4>10 simple tips why diversity is good for business</h4>
-				<p>We cannot concieve of a thought divorced from brainwaves. a statments which remains a mere</p>
-			</div>
-			<div class="post">
-				<div class="post__image" style="background-image: url('<?php echo get_template_directory_uri(); ?>/i/filler-5.png')"></div>
-				<span class="date">April 6, 2017</span>
-				<span class="country"><img src="<?php echo get_template_directory_uri(); ?>/i/can.png" alt="">Canada</span>
-				<h4>10 simple tips why diversity is good for business</h4>
-				<p>We cannot concieve of a thought divorced from brainwaves. a statments which remains a mere</p>
-			</div>
-		</div>
-		<a href="#" class="btn btn-arrow purple">
+
+			<?php
+				$args = array(
+				    // Arguments for your query.
+				    "category_name" => "news",
+				    'posts_per_page' => 3
+				);
+				// Custom query.
+				$query = new WP_Query( $args );
+				 
+				// Check that we have query results.
+				if ( $query->have_posts() ) {
+				 
+				    // Start looping over the query results.
+				    while ( $query->have_posts() ) {
+				 
+				        $query->the_post();
+				        $country = get_field_object('country');
+						$value = $country['value'];
+						$label = $country['choices'][ $value ]; ?>
+				        <div class="post">
+							<a href="<?php the_permalink(); ?>"><div class="post__image" style='background-image: url("<?php the_post_thumbnail_url(); ?>")'></div></a>
+							<span class="date"><?php echo get_the_date($format, $post_id); ?></span>
+							<span class="country flag-icon flag-icon-<?php echo $value; ?>"><?php echo $label; ?></span>
+							<h4><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h4>
+							<p><?php the_excerpt(); ?></p>
+						</div>
+				 
+				    <?php }
+				 
+				}
+				 
+				// Restore original post data.
+				wp_reset_postdata();
+			 
+			?>
+		<a href="/read/news" class="btn btn-arrow purple">
 			View All
 			<svg class="ico">
 				<use xlink:href="#arrow"/>
 			</svg>
 		</a>
+	</div>
 	</div>
 	<!-- THINK SECTION -->
 	<div class="catgroup">
@@ -75,30 +97,44 @@ get_header(); ?>
 			<span class="catgroup__subtitle">Global thought leadership</span>
 		</div>
 		<div class="post__group">
-			<div class="post">
-				<div class="post__image" style="background-image: url('<?php echo get_template_directory_uri(); ?>/i/filler-5.png')"></div>
-				<span class="date">April 6, 2017</span>
-				<span class="tag">Hire</span>
-				<h4>10 simple tips why diversity is good for business</h4>
-				<p>We cannot concieve of a thought divorced from brainwaves. a statments which remains a mere</p>
-			</div>
-			<div class="post">
-				<div class="post__image" style="background-image: url('<?php echo get_template_directory_uri(); ?>/i/filler-5.png')"></div>
-				<span class="date">April 6, 2017</span>
-				<span class="tag">Hire</span>
-				<h4>10 simple tips why diversity is good for business</h4>
-				<p>We cannot concieve of a thought divorced from brainwaves. a statments which remains a mere</p>
-			</div>
-			<div class="post">
-				<div class="post__image" style="background-image: url('<?php echo get_template_directory_uri(); ?>/i/filler-5.png')"></div>
-				<span class="date">April 6, 2017</span>
-				<span class="tag">Hire</span>
-				<h4>10 simple tips why diversity is good for business</h4>
-				<p>We cannot concieve of a thought divorced from brainwaves. a statments which remains a mere</p>
-			</div>
 
+			<?php
+				$args = array(
+				    // Arguments for your query.
+				    "category_name" => "think",
+				    'posts_per_page' => 3
+				);
+				 
+				// Custom query.
+				$query = new WP_Query( $args );
+				 
+				// Check that we have query results.
+				if ( $query->have_posts() ) {
+				 
+				    // Start looping over the query results.
+				    while ( $query->have_posts() ) {
+				 
+				        $query->the_post(); ?>
+				 
+				        <div class="post">
+							<a href="<?php the_permalink(); ?>"><div class="post__image" style='background-image: url("<?php the_post_thumbnail_url(); ?>")'></div></a>
+							<span class="date"><?php echo get_the_date($format, $post_id); ?></span>
+							<?php $badge = get_field_object('badge');
+							$bValue = $badge['value'];
+							$bLabel = $badge['choices'][ $bValue ]; ?>
+							<span class="<?php echo $bValue; ?>-badge badge"><?php echo $bLabel; ?></span>
+							<h4><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h4>
+							<p><?php the_excerpt(); ?></p>
+						</div>
+				 
+				    <?php }
+				 
+				}
+				// Restore original post data.
+				wp_reset_postdata();
+			?>
 		</div>
-		<a href="#" class="btn btn-arrow purple">
+		<a href="/read/think" class="btn btn-arrow purple">
 			View All
 			<svg class="ico">
 				<use xlink:href="#arrow"/>
@@ -112,29 +148,43 @@ get_header(); ?>
 			<span class="catgroup__subtitle">Your questions answered</span>
 		</div>
 		<div class="post__group">
-			<div class="post">
-				<div class="post__image" style="background-image: url('<?php echo get_template_directory_uri(); ?>/i/filler-5.png')"></div>
-				<span class="date">April 6, 2017</span>
-				<span class="country"><img src="<?php echo get_template_directory_uri(); ?>/i/can.png" alt="">Canada</span>
-				<h4>10 simple tips why diversity is good for business</h4>
-				<p>We cannot concieve of a thought divorced from brainwaves. a statments which remains a mere</p>
-			</div>
-			<div class="post">
-				<div class="post__image" style="background-image: url('<?php echo get_template_directory_uri(); ?>/i/filler-5.png')"></div>
-				<span class="date">April 6, 2017</span>
-				<span class="country"><img src="<?php echo get_template_directory_uri(); ?>/i/can.png" alt="">Canada</span>
-				<h4>10 simple tips why diversity is good for business</h4>
-				<p>We cannot concieve of a thought divorced from brainwaves. a statments which remains a mere</p>
-			</div>
-			<div class="post">
-				<div class="post__image" style="background-image: url('<?php echo get_template_directory_uri(); ?>/i/filler-5.png')"></div>
-				<span class="date">April 6, 2017</span>
-				<span class="country"><img src="<?php echo get_template_directory_uri(); ?>/i/can.png" alt="">Canada</span>
-				<h4>10 simple tips why diversity is good for business</h4>
-				<p>We cannot concieve of a thought divorced from brainwaves. a statments which remains a mere</p>
-			</div>
+			<?php
+				$args = array(
+				    // Arguments for your query.
+				    "category_name" => "qa",
+				    'posts_per_page' => 3
+				);
+				 
+				// Custom query.
+				$query = new WP_Query( $args );
+				 
+				// Check that we have query results.
+				if ( $query->have_posts() ) {
+				 
+				    // Start looping over the query results.
+				    while ( $query->have_posts() ) {
+				 
+				        $query->the_post(); ?>
+				 
+				        <div class="post">
+							<a href="<?php the_permalink(); ?>"><div class="post__image" style='background-image: url("<?php the_post_thumbnail_url(); ?>")'></div></a>
+							<span class="date"><?php echo get_the_date($format, $post_id); ?></span>
+							<?php $country = get_field_object('country');
+							$value = $country['value'];
+							$label = $country['choices'][ $value ]; ?>
+							<span class="country flag-icon flag-icon-<?php echo $value; ?>"><?php echo $label; ?></span>
+							<h4><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h4>
+							<p><?php the_excerpt(); ?></p>
+						</div>
+				 
+				    <?php }
+				 
+				}
+				// Restore original post data.
+				wp_reset_postdata();
+			?>
 		</div>
-		<a href="#" class="btn btn-arrow purple">
+		<a href="/read/qa" class="btn btn-arrow purple">
 			View All
 			<svg class="ico">
 				<use xlink:href="#arrow"/>
@@ -148,21 +198,43 @@ get_header(); ?>
 			<span class="catgroup__subtitle">The latest from Hire Immigrants</span>
 		</div>
 		<div class="catgroup__list">
-			<a href="#">
-				<span>10 simple tips why diversity is good for business</span>
-				<img src="<?php echo get_template_directory_uri(); ?>/i/filler-3.png" alt="">
-			</a>
-			<a href="#">
-				<span>10 simple tips why diversity is good for business</span>
-				<img src="<?php echo get_template_directory_uri(); ?>/i/filler-3.png" alt="">
-			</a>
+			<?php
+				$args = array(
+				    // Arguments for your query.
+				    "category_name" => "announcements",
+				    'posts_per_page' => 2
+				);
+				 
+				// Custom query.
+				$query = new WP_Query( $args );
+				 
+				// Check that we have query results.
+				if ( $query->have_posts() ) {
+				 
+				    // Start looping over the query results.
+				    while ( $query->have_posts() ) {
+				 
+				        $query->the_post(); ?>
+
+				        <div class="post--list">
+							<span><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></span>
+							<a href="<?php the_permalink(); ?>"><div class="post__image--list" style='background-image: url("<?php the_post_thumbnail_url(); ?>")'></div></a>
+						</div>
+
+				    <?php }
+				 
+				}
+				// Restore original post data.
+				wp_reset_postdata();
+			?>
 		</div>
-		<a href="#" class="btn btn-arrow purple">
+		<a href="/read/announcements" class="btn btn-arrow purple">
 			View All
 			<svg class="ico">
 				<use xlink:href="#arrow"/>
 			</svg>
 		</a>
+	</div>
 	</div>
 </div>
 <?php get_footer(); ?>

@@ -1,0 +1,63 @@
+.search-page{
+	
+	.searched-term{
+		color: $tundora;
+	}
+	a.listing{
+		display: block;
+		text-decoration: none;
+		color: $tundora;
+		font-size: 24px;
+		border-bottom: solid 1px $dusty-gray;
+		line-height: 50px;
+		transition: all 0.2s;
+		&:hover{
+			color: $victoria;
+			transition: all 0.2s;
+		}
+	}
+	.no-results-searched-term{
+		font-size: 50px;
+		display: block;
+		color: $tundora;
+		text-align: center;
+	}
+	.apologies{
+		display: block;
+		text-align: center;
+		font-size: 26px;
+		color: $tundora;
+		font-family: $georgia;
+		margin-bottom: 50px;
+	}
+	.no-results-search-form{
+		input{
+			float: left;
+			width: 93%;
+			line-height: 50px;
+			font-size: 36px;
+			font-family: $truenoLight;
+			color: $mine-shaft;
+			box-sizing: border-box;
+			padding-left: 10px;
+			margin: 0;
+			border: solid 1px $dusty-gray;
+			height: 50px;
+		}
+		button{
+			float: right;
+			width: 5.5%;
+			border: none;
+			background: $victoria;
+			height: 50px;
+
+			.ico{
+				fill: $white;
+				width: 25px;
+				height: 25px;
+				padding-top: 3px;
+				padding-left: 2px;
+			}
+		}
+	}
+}
