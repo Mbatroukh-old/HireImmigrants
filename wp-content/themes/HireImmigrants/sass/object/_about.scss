@@ -4,6 +4,9 @@
 		background-position-y: -80px;
 		background-size: 100%;
 		padding-top: 145px;
+		@include respond(screen-xs){
+			padding-top: 50px;
+		}
 		h3{
 			font-size: 40px;
 			font-family: $truenoLight;
@@ -12,6 +15,10 @@
 			display: block;
 			text-align: center;
 			margin-bottom: 20px;
+			@include respond(screen-xs){
+				font-size: 22px;
+				line-height: 34px;
+			}
 		}
 		p{
 			color: $gray;
@@ -20,17 +27,42 @@
 			font-family: $georgia;
 			display: block;
 			text-align: center;
+			@include respond(screen-xs){
+				font-size: 16px;
+				line-height: 26px;
+			}
 		}
 		.item-row{
 			padding-top: 95px;
 			display: flex;
 			justify-content: space-between;
 			margin-bottom: 190px;
+			@include respond(screen-xs){
+				padding-top: 40px;
+				display: block;
+				margin-bottom: 60px;
+			}
 			.item{
+				@include respond(screen-xs){
+					clear: both;
+					margin-bottom: 35px;
+					display: flex;
+					flex-direction: row;
+					align-items: center;
+					justify-content: space-between;
+					// flex: 1;
+				}
 				img{
 					display: block;
 					margin: 0 auto;
 					margin-bottom: 25px;
+					@include respond(screen-xs){
+						// float: left;
+						width: 50px;
+						height: auto;
+						margin-right: 25px;
+						margin-bottom: 0;
+					}
 				}
 				span{
 					font-size: 20px;
@@ -39,6 +71,13 @@
 					line-height: 34px;
 					display: block;
 					text-align: center;
+					@include respond(screen-xs){
+						// float: left;
+						text-align: left;
+						flex-grow: 1;
+						font-size: 16px;
+						line-height: 26px;
+					}
 				}
 			}
 		}
@@ -51,13 +90,28 @@
 			color: $tundora;
 			display: block;
 			margin-bottom: 20px;
+			@include respond(screen-xs){
+				font-size: 22px;
+				line-height: 34px;
+			}
+			margin-bottom: 15px;
 		}
 		.item{
 			clear: both;
 			margin-bottom: 100px;
+			@include respond(screen-xs){
+				margin-bottom: 35px;
+			}
 			img{
 				float: left;
 				margin-right: 50px;
+				@include respond(screen-xs){
+					float: none;
+					margin-right: 0;
+					width: 50px;
+					margin: 0 auto 15px auto;
+					display: block;
+				}
 			}
 			span{
 				font-size: 24px;
@@ -65,12 +119,22 @@
 				color: $tundora;
 				display: inline-block;
 				margin-bottom: 15px;
+				@include respond(screen-xs){
+					font-size: 16px;
+					text-align: center;
+					display: block;
+				}
 			}
 			p{
 				font-size: 20px;
 				line-height: 36px;
 				color: $tundora;
 				font-family: $georgia;
+				@include respond(screen-xs){
+					font-size: 16px;
+					line-height: 26px;
+					text-align: center;
+				}
 			}
 		}
 	}
@@ -81,6 +145,10 @@
 			text-transform: uppercase;
 			font-family: $truenoLight;display: block;
 			margin-bottom: 26px;
+			@include respond(screen-xs){
+				font-size: 12px;
+				margin-bottom: 15px;
+			}
 		}
 		& > p{
 			color: $gray;
@@ -89,11 +157,19 @@
 			font-family: $georgia;
 			display: block;
 			margin-bottom: 70px;
+			@include respond(screen-xs){
+				font-size: 16px;
+				line-height: 26px;
+				margin-bottom: 35px;
+			}
 		}
 	}
 	.activities{
 		h3{
 			margin-bottom: 100px;
+			@include respond(screen-xs){
+				margin-bottom: 50px;
+			}
 		}
 	}
 }

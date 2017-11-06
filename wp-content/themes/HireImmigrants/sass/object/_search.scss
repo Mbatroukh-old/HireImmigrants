@@ -44,6 +44,11 @@
 			margin: 0;
 			border: solid 1px $dusty-gray;
 			height: 50px;
+			@include respond(screen-xs){
+				float: none;
+				width: 100%;
+				margin-bottom: 15px;
+			}
 		}
 		button{
 			float: right;
@@ -51,6 +56,10 @@
 			border: none;
 			background: $victoria;
 			height: 50px;
+			@include respond(screen-xs){
+				float: none;
+				width: 100%;
+			}
 
 			.ico{
 				fill: $white;
