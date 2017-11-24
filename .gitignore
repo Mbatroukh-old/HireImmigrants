@@ -2,3 +2,7 @@ node_modules/
 bower_components/
 Archive.zip
 wp-content/.DS_Store
+.DS_Store
+wp-content/.DS_Store
+wp-content/themes/.DS_Store
+wp-content/themes/HireImmigrants/i/.DS_Store

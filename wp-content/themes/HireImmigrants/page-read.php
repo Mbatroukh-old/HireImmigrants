@@ -65,9 +65,13 @@ get_header(); ?>
 				        $query->the_post();
 				        $country = get_field_object('country');
 						$value = $country['value'];
-						$label = $country['choices'][ $value ]; ?>
+						$label = $country['choices'][ $value ];
+						$bgimg = has_post_thumbnail(); ?>
 				        <div class="post">
-							<a href="<?php the_permalink(); ?>"><div class="post__image" style='background-image: url("<?php the_post_thumbnail_url(); ?>")'></div></a>
+							<a href="<?php the_permalink(); ?>">
+								<div class="post__image" style='background-image: url("<?php if($bgimg){the_post_thumbnail_url();} else { echo get_template_directory_uri(); ?>/i/fallback.jpg<?php } ?>")'>
+								</div>
+							</a>
 							<span class="date"><?php echo get_the_date($format, $post_id); ?></span>
 							<span class="country flag-icon flag-icon-<?php echo $value; ?>"><?php echo $label; ?></span>
 							<h4><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h4>
@@ -114,10 +118,14 @@ get_header(); ?>
 				    // Start looping over the query results.
 				    while ( $query->have_posts() ) {
 				 
-				        $query->the_post(); ?>
+				        $query->the_post();
+				        $bgimg = has_post_thumbnail(); ?>
 				 
 				        <div class="post">
-							<a href="<?php the_permalink(); ?>"><div class="post__image" style='background-image: url("<?php the_post_thumbnail_url(); ?>")'></div></a>
+							<a href="<?php the_permalink(); ?>">
+								<div class="post__image" style='background-image: url("<?php if($bgimg){the_post_thumbnail_url();} else { echo get_template_directory_uri(); ?>/i/fallback.jpg<?php } ?>")'>
+								</div>
+							</a>
 							<span class="date"><?php echo get_the_date($format, $post_id); ?></span>
 							<?php $badge = get_field_object('badge');
 							$bValue = $badge['value'];
@@ -164,10 +172,11 @@ get_header(); ?>
 				    // Start looping over the query results.
 				    while ( $query->have_posts() ) {
 				 
-				        $query->the_post(); ?>
+				        $query->the_post();
+				        $bgimg = has_post_thumbnail(); ?>
 				 
 				        <div class="post">
-							<a href="<?php the_permalink(); ?>"><div class="post__image" style='background-image: url("<?php the_post_thumbnail_url(); ?>")'></div></a>
+							<a href="<?php the_permalink(); ?>"><div class="post__image" style='background-image: url("<?php if($bgimg){the_post_thumbnail_url();} else { echo get_template_directory_uri(); ?>/i/fallback.jpg<?php } ?>")'></div></a>
 							<span class="date"><?php echo get_the_date($format, $post_id); ?></span>
 							<?php $country = get_field_object('country');
 							$value = $country['value'];
@@ -214,11 +223,12 @@ get_header(); ?>
 				    // Start looping over the query results.
 				    while ( $query->have_posts() ) {
 				 
-				        $query->the_post(); ?>
+				        $query->the_post();
+				        $bgimg = has_post_thumbnail(); ?>
 
 				        <div class="post--list">
 							<span><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></span>
-							<a href="<?php the_permalink(); ?>"><div class="post__image--list" style='background-image: url("<?php the_post_thumbnail_url(); ?>")'></div></a>
+							<a href="<?php the_permalink(); ?>"><div class="post__image--list" style='background-image: url("<?php if($bgimg){the_post_thumbnail_url();} else { echo get_template_directory_uri(); ?>/i/fallback.jpg<?php } ?>")'></div></a>
 						</div>
 
 				    <?php }
